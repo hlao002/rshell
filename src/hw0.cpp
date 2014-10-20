@@ -15,7 +15,7 @@ void replaceCntr (string &cmd,string sym,int dNum)
 	while(cmd.find(sym) != string::npos)
 	{
 		int found =cmd.find(sym);
-		cmd.replace(found, dNum, " , ");
+		cmd.replace(found, dNum, ",");
 	}	
 }
 void bash()
@@ -66,7 +66,24 @@ while(1)
 	}
 	//Replace connectors with placeholders.
 	if(colon || ands || ors)
-	replaceCntr(cmd,connector,dNum);
+	{
+		replaceCntr(cmd,connector,dNum);
+//		cout << endl;
+		while(cmd[cmd.size()-1] == ' '|| cmd[cmd.size()-1] == ',')
+		{
+			if(cmd[cmd.size()-1] == ' ')
+				cmd.erase(cmd.size()-1,1);
+			if(cmd[cmd.size()-1] == ',' && cmd[cmd.size()-2] == ',')
+			{
+				cout << "syntax error near unexpected token '" << connector << "'" << endl;	
+				bash();
+				exit(0);
+			}
+			if(cmd[cmd.size()-1] == ',')
+				cmd.erase(cmd.size()-1,1);
+			}
+		}
+//		cout << cmd << endl;	
 	vector<string> tok;
 	//Tokenizes userinput (now with "," as connector placeholders).
 	char_separator<char> sep(",");
@@ -106,6 +123,7 @@ while(1)
 			//store a command and its arguments into Argv.
 			Argv[j] = new char[cmd.size()];
 			string placeHolder = *it2;
+			if(placeHolder != "")
 			strcpy(Argv[j],placeHolder.c_str());
 		}	
 		// Test for exit using Argv.
@@ -116,6 +134,7 @@ while(1)
 		{
 			exit(0);
 		}
+		Argv[cmd.size()] = NULL;
 		//fork the function.
 		int pid = fork();
 		//CHILD!!!
@@ -149,8 +168,18 @@ while(1)
 				cs = false;
 			}
 			//Test all cases to see if a second command should run	
+			bool cont = false;
 			if((colon) || (cs && ands) || (!cs && ors))
-			continue;
+			{
+				cont = true;
+				continue;
+			}
+			if (cont && (tok[tok.size()-1]== ","))
+			{
+				bash();
+				exit(0);
+			}
+			
 			//If not return to beginning of terminal.
 			else
 			{
