@@ -1,0 +1,231 @@
+Script started on Tue 21 Oct 2014 01:38:14 PM PDT
+]0;henry@henry-S400CA: ~/Documents/CS100/rshell/testhenry@henry-S400CA:~/Documents/CS100/rshell/test$ cd ..
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ make
+if [ ! -d "./bin" ];\
+	then mkdir bin;\
+	fi
+g++ -Wall -Werror -ansi -pedantic src/hw0.cpp -o bin/rshell
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
+#testing single commands
+ls
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+pwd
+/home/henry/Documents/CS100/rshell
+echo 
+
+echo cat
+cat
+mkdir chesse
+ls
+bin  chesse  exec.script  LICENSE  Makefile  README.md	src  test
+rmdir chesse
+banana
+execvp: No such file or directory
+coco    cake
+execvp: No such file or directory
+
+#testing single commands with arguments
+ls -a
+.  ..  bin  exec.script  .git  LICENSE	Makefile  README.md  src  test
+ls -a -l -Ql
+total 40
+drwxrwxr-x 6 henry henry 4096 Oct 21 13:39 "."
+drwxrwxr-x 4 henry henry 4096 Oct 20 12:27 ".."
+drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "bin"
+-rw-rw-r-- 1 henry henry  209 Oct 21 13:34 "exec.script"
+drwxrwxr-x 8 henry henry 4096 Oct 21 13:36 ".git"
+-rw-rw-r-- 1 henry henry  101 Oct 20 12:27 "LICENSE"
+-rw-rw-r-- 1 henry henry  259 Oct 21 12:58 "Makefile"
+-rw-rw-r-- 1 henry henry 3056 Oct 21 12:58 "README.md"
+drwxrwxr-x 2 henry henry 4096 Oct 21 12:58 "src"
+drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "test"
+ls -b -a -Ql -all
+total 40
+drwxrwxr-x 6 henry henry 4096 Oct 21 13:39 "."
+drwxrwxr-x 4 henry henry 4096 Oct 20 12:27 ".."
+drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "bin"
+-rw-rw-r-- 1 henry henry  209 Oct 21 13:34 "exec.script"
+drwxrwxr-x 8 henry henry 4096 Oct 21 13:36 ".git"
+-rw-rw-r-- 1 henry henry  101 Oct 20 12:27 "LICENSE"
+-rw-rw-r-- 1 henry henry  259 Oct 21 12:58 "Makefile"
+-rw-rw-r-- 1 henry henry 3056 Oct 21 12:58 "README.md"
+drwxrwxr-x 2 henry henry 4096 Oct 21 12:58 "src"
+drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "test"
+echo cat
+cat
+echo caat dogd cheskdejd
+caat dogd cheskdejd
+echo    cat       dog
+cat dog
+ls     -a      -l
+total 40
+drwxrwxr-x 6 henry henry 4096 Oct 21 13:39 .
+drwxrwxr-x 4 henry henry 4096 Oct 20 12:27 ..
+drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 bin
+-rw-rw-r-- 1 henry henry  209 Oct 21 13:34 exec.script
+drwxrwxr-x 8 henry henry 4096 Oct 21 13:36 .git
+-rw-rw-r-- 1 henry henry  101 Oct 20 12:27 LICENSE
+-rw-rw-r-- 1 henry henry  259 Oct 21 12:58 Makefile
+-rw-rw-r-- 1 henry henry 3056 Oct 21 12:58 README.md
+drwxrwxr-x 2 henry henry 4096 Oct 21 12:58 src
+drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 test
+echo exit
+exit
+pwd -a
+pwd: invalid option -- 'a'
+Try 'pwd --help' for more information.
+bnananas -de  ac  cat -all
+execvp: No such file or directory
+#testing single commands with connectors
+ls ; ls
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+ls;
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+;ls
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+ls ;;
+ls 0 -a ; pwd
+.  ..  bin  exec.script  .git  LICENSE	Makefile  README.md  src  test
+/home/henry/Documents/CS100/rshell
+mkdir cats  ; ls; d rmdir cat
+bin  cats  exec.script	LICENSE  Makefile  README.md  src  test
+rmdir: failed to remove ‘cat’: No such file or directory
+mkdir cats ;       ls      ;rm  dir cats
+mkdir: cannot create directory ‘cats’: File exists
+bin  cats  exec.script	LICENSE  Makefile  README.md  src  test
+rm d  dir cats ; lls    ls   ;  ls   ls
+rmdir: failed to remove ‘cats’: No such file or directory
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+echo cat; ls; pwd ;cat ls; mkdir pie;ls   ;ls    ;rmdir pie
+cat
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+/home/henry/Documents/CS100/rshell
+cat: ls: No such file or directory
+bin  exec.script  LICENSE  Makefile  pie  README.md  src  test
+#testing "&&" connector
+echo cat && ex cho dog
+cat
+dog
+echo cat  && echo dog &&    ec  pwd
+cat
+dog
+/home/henry/Documents/CS100/rshell
+echo do  g        ls -a -bandnds && echo cat
+4 drwxrwxr-x 6 1000 1000 4096 Oct 21 13:47 .
+cat
+pwd ;     && echo pie&& echo e chesse
+/home/henry/Documents/CS100/rshell
+pie
+chesse
+pwd &&&& echo cat
+/home/henry/Documents/CS100/rshell
+cat
+pwd && && echo dog
+pwd && && echo cat echo exit
+#testing          echo test         man pie &&   ** e    && echo ecis
+No manual entry for pie
+pwd && ls -a && mkdir cat && ls&& de  ma kdir dog &&d r rmdir cat && re mdir doc g
+/home/henry/Documents/CS100/rshell
+.  ..  bin  exec.script  .git  LICENSE	Makefile  README.md  src  test
+bin  cat  exec.script  LICENSE	Makefile  README.md  src  test
+#testing "||" conec  nc ectors
+man pie || echo cat
+No manual entry for pie
+cat
+echo cat || man pie
+cat
+pwd || echo cat || man pie
+/home/henry/Documents/CS100/rshell
+ma p  n cake || ecch  ho dog } || pws
+No manual entry for cake
+dog
+ls       ||     echo cat \   |  |echo dog
+bin  exec.script  LICENSE  Makefile  README.md	src  test
+man pie ||   echo cat \          man chicken \   |    |echo dog
+No manual entry for pie
+No manual entry for chicken
+No manual entry for |
+No manual entry for |echo
+No manual entry for dog
+#testing connectors being use together (behavior similar to READMD E.md info)
+echo cat && echo dog ; e cat   man pie
+cat && echo dog
+No manual entry for pie
+echo cat && pwd l ; man pie || exit
+cat && pwd
+No manual entry for pie
+No manual entry for ||
+[?1049h[?1h=EXIT(3)                    Linux Programmer's Manual                   EXIT(3)[m
+[m
+[1mNAME[0m[m
+       exit - cause normal process termination[m
+[m
+[1mSYNOPSIS[0m[m
+       [1m#include[0m [1m<stdlib.h>[0m[m
+[m
+       [1mvoid[0m [1mexit(int[0m [4mstatus[24m[1m);[0m[m
+[m
+[1mDESCRIPTION[0m[m
+       The  [1mexit[0m() function causes normal process termination and the value of[m
+       [4mstatus[24m [4m&[24m [4m0377[24m is returned to the parent (see [1mwait[0m(2)).[m
+[m
+       All functions registered with [1matexit[0m(3) and [1mon_exit[0m(3) are  called,  in[m
+       the  reverse  order  of their registration.  (It is possible for one of[m
+       these functions to use [1matexit[0m(3) or [1mon_exit[0m(3)  to  register  an  addi‐[m
+       tional  function  to be executed during exit processing; the new regis‐[m
+       tration is added to the front of the list of functions that  remain  to[m
+       be  called.)  If one of these functions does not return (e.g., it calls[m
+       [1m_exit[0m(2), or kills itself with a signal), then none  of  the  remaining[m
+       functions is called, and further exit processing (in particular, flush‐[m
+       ing of [1mstdio[0m(3) streams) is abandoned.  If a function has  been  regis‐[m
+[7m Manual page exit(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049lecho cat &&  || dog && pie   ech   man   pie
+cat || dog
+No manual entry for pie
+cat || god ;;             echo cat || dog || dog;;
+#testing exit command
+exit
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
+;exit
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
+echo      mkdir cat && exit
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ ls
+[0m[01;34mbin[0m  [01;34mcat[0m  exec.script  LICENSE  Makefile  README.md  [01;34msrc[0m  [01;34mtest[0m
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
+echo cat ||ex   exit
+cat
+echo dog || man pue  ie || d exit
+dog
+exit      man pie || exit
+No manual entry for pie
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ man[K[K[Kbin/rshell
+chicken ;;            chicken ; pie
+execvp: No such file or directory
+execvp: No such file or directory
+#testing command   ents
+echo cat # ; exit
+cat
+echo cat #
+cat
+echo cat #echo     dog
+cat
+echo cat# dog
+cat
+pwd # exit cat
+/home/henry/Documents/CS100/rshell
+pwd ;   && ls -a || exi      && "ex   #ex   exit
+/home/henry/Documents/CS100/rshell
+.  ..  bin  cat  exec.script  .git  LICENSE  Makefile  README.md  src  test
+pwd && hello man name djekdejdekjd d sjjs^[[D^[[D^[[D^[[D                 
+/home/henry/Documents/CS100/rshell
+execvp: No such file or directory
+pwd && echo cat #jdejesksjs
+/home/henry/Documents/CS100/rshell
+cat
+#testing done
+exit
+]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ exit
+exit
+
+Script done on Tue 21 Oct 2014 02:19:56 PM PDT
