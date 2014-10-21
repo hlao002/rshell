@@ -15,7 +15,7 @@ void replaceCntr (string &cmd,string sym,int dNum)
         while(cmd.find(sym) != string::npos)
         {
                 int found =cmd.find(sym);
-                cmd.replace(found, dNum, ",");
+                cmd.replace(found, dNum, " , ");
         }
 }
 void bash()
@@ -68,14 +68,13 @@ while(1)
         if(colon || ands || ors)
         {
                 replaceCntr(cmd,connector,dNum);
-//              cout << endl;
                 while(cmd[cmd.size()-1] == ' '|| cmd[cmd.size()-1] == ',')
                 {
                         if(cmd[cmd.size()-1] == ' ')
                                 cmd.erase(cmd.size()-1,1);
                         if(cmd[cmd.size()-1] == ',' && cmd[cmd.size()-2] == ',')
                         {
-                                cout << "syntax error near unexpected token '" << connector << "'" << endl;
+                                cout << "bash: syntax error near unexpected token '" << connector << "'" << endl;
                                 bash();
                                 exit(0);
                         }
@@ -83,7 +82,6 @@ while(1)
                                 cmd.erase(cmd.size()-1,1);
                         }
                 }
-//              cout << cmd << endl;    
         vector<string> tok;
         //Tokenizes userinput (now with "," as connector placeholders).
         char_separator<char> sep(",");
@@ -202,4 +200,3 @@ int main(int argc, char** argv)
         return 0;
 
 }
-
