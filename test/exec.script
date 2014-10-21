@@ -1,231 +1,241 @@
-Script started on Tue 21 Oct 2014 01:38:14 PM PDT
-]0;henry@henry-S400CA: ~/Documents/CS100/rshell/testhenry@henry-S400CA:~/Documents/CS100/rshell/test$ cd ..
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ make
-if [ ! -d "./bin" ];\
-	then mkdir bin;\
-	fi
-g++ -Wall -Werror -ansi -pedantic src/hw0.cpp -o bin/rshell
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
-#testing single commands
-ls
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-pwd
-/home/henry/Documents/CS100/rshell
-echo 
-
-echo cat
+Script started on Tue 21 Oct 2014 04:05:23 PM PDT
+~
+hlao002@hammer $ cd CS100/rshell
+~/CS100/rshell
+hlao002@hammer $ bin/rshell
+hlao002@hammer.cs.ucr.edu$ #testing single commands
+hlao002@hammer.cs.ucr.edu$ 
+hlao002@hammer.cs.ucr.edu$ ls
+bin  LICENSE  Makefile	README.md  src	test
+hlao002@hammer.cs.ucr.edu$ pwd
+/home/csmajs/hlao002/CS100/rshell
+hlao002@hammer.cs.ucr.edu$ echo cat
 cat
-mkdir chesse
-ls
-bin  chesse  exec.script  LICENSE  Makefile  README.md	src  test
-rmdir chesse
-banana
-execvp: No such file or directory
-coco    cake
-execvp: No such file or directory
-
-#testing single commands with arguments
-ls -a
-.  ..  bin  exec.script  .git  LICENSE	Makefile  README.md  src  test
-ls -a -l -Ql
-total 40
-drwxrwxr-x 6 henry henry 4096 Oct 21 13:39 "."
-drwxrwxr-x 4 henry henry 4096 Oct 20 12:27 ".."
-drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "bin"
--rw-rw-r-- 1 henry henry  209 Oct 21 13:34 "exec.script"
-drwxrwxr-x 8 henry henry 4096 Oct 21 13:36 ".git"
--rw-rw-r-- 1 henry henry  101 Oct 20 12:27 "LICENSE"
--rw-rw-r-- 1 henry henry  259 Oct 21 12:58 "Makefile"
--rw-rw-r-- 1 henry henry 3056 Oct 21 12:58 "README.md"
-drwxrwxr-x 2 henry henry 4096 Oct 21 12:58 "src"
-drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "test"
-ls -b -a -Ql -all
-total 40
-drwxrwxr-x 6 henry henry 4096 Oct 21 13:39 "."
-drwxrwxr-x 4 henry henry 4096 Oct 20 12:27 ".."
-drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "bin"
--rw-rw-r-- 1 henry henry  209 Oct 21 13:34 "exec.script"
-drwxrwxr-x 8 henry henry 4096 Oct 21 13:36 ".git"
--rw-rw-r-- 1 henry henry  101 Oct 20 12:27 "LICENSE"
--rw-rw-r-- 1 henry henry  259 Oct 21 12:58 "Makefile"
--rw-rw-r-- 1 henry henry 3056 Oct 21 12:58 "README.md"
-drwxrwxr-x 2 henry henry 4096 Oct 21 12:58 "src"
-drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 "test"
-echo cat
-cat
-echo caat dogd cheskdejd
-caat dogd cheskdejd
-echo    cat       dog
-cat dog
-ls     -a      -l
-total 40
-drwxrwxr-x 6 henry henry 4096 Oct 21 13:39 .
-drwxrwxr-x 4 henry henry 4096 Oct 20 12:27 ..
-drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 bin
--rw-rw-r-- 1 henry henry  209 Oct 21 13:34 exec.script
-drwxrwxr-x 8 henry henry 4096 Oct 21 13:36 .git
--rw-rw-r-- 1 henry henry  101 Oct 20 12:27 LICENSE
--rw-rw-r-- 1 henry henry  259 Oct 21 12:58 Makefile
--rw-rw-r-- 1 henry henry 3056 Oct 21 12:58 README.md
-drwxrwxr-x 2 henry henry 4096 Oct 21 12:58 src
-drwxrwxr-x 2 henry henry 4096 Oct 21 13:38 test
-echo exit
+hlao002@hammer.cs.ucr.edu$ echo exit
 exit
-pwd -a
-pwd: invalid option -- 'a'
-Try 'pwd --help' for more information.
-bnananas -de  ac  cat -all
+hlao002@hammer.cs.ucr.edu$ echo ; e |exit
+|exit
+hlao002@hammer.cs.ucr.edu$ mkdir
+mkdir: missing operand
+Try `mkdir --help' for more information.
+hlao002@hammer.cs.ucr.edu$ rmdkr  ir
+rmdir: missing operand
+Try `rmdir --help' for more information.
+hlao002@hammer.cs.ucr.edu$ ec  man pie
+No manual entry for pie
+hlao002@hammer.cs.ucr.edu$ ejsdk
 execvp: No such file or directory
-#testing single commands with connectors
-ls ; ls
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-ls;
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-;ls
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-ls ;;
-ls 0 -a ; pwd
-.  ..  bin  exec.script  .git  LICENSE	Makefile  README.md  src  test
-/home/henry/Documents/CS100/rshell
-mkdir cats  ; ls; d rmdir cat
-bin  cats  exec.script	LICENSE  Makefile  README.md  src  test
-rmdir: failed to remove ‘cat’: No such file or directory
-mkdir cats ;       ls      ;rm  dir cats
-mkdir: cannot create directory ‘cats’: File exists
-bin  cats  exec.script	LICENSE  Makefile  README.md  src  test
-rm d  dir cats ; lls    ls   ;  ls   ls
-rmdir: failed to remove ‘cats’: No such file or directory
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-echo cat; ls; pwd ;cat ls; mkdir pie;ls   ;ls    ;rmdir pie
-cat
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-/home/henry/Documents/CS100/rshell
-cat: ls: No such file or directory
-bin  exec.script  LICENSE  Makefile  pie  README.md  src  test
-#testing "&&" connector
-echo cat && ex cho dog
-cat
-dog
-echo cat  && echo dog &&    ec  pwd
-cat
-dog
-/home/henry/Documents/CS100/rshell
-echo do  g        ls -a -bandnds && echo cat
-4 drwxrwxr-x 6 1000 1000 4096 Oct 21 13:47 .
-cat
-pwd ;     && echo pie&& echo e chesse
-/home/henry/Documents/CS100/rshell
+hlao002@hammer.cs.ucr.edu$ djked
+execvp: No such file or directory
+hlao002@hammer.cs.ucr.edu$ #testing multiple arug  guments with single command
+hlao002@hammer.cs.ucr.edu$ 
+hlao002@hammer.cs.ucr.edu$ ls -a
+.  ..  bin  .git  LICENSE  Makefile  README.md	src  test
+hlao002@hammer.cs.ucr.edu$ m echo cats and dogs
+cats and dogs
+hlao002@hammer.cs.ucr.edu$ echo cats      and     dogs
+cats and dogs
+hlao002@hammer.cs.ucr.edu$ ls -a -b -  l
+total 36
+drwx------ 6 hlao002 csmajs 4096 Oct 21 15:57 .
+drwx------ 3 hlao002 csmajs 4096 Oct 21 15:49 ..
+drwx------ 2 hlao002 csmajs 4096 Oct 21 16:04 bin
+drwx------ 8 hlao002 csmajs 4096 Oct 21 15:49 .git
+-rw------- 1 hlao002 csmajs  101 Oct 21 15:49 LICENSE
+-rw------- 1 hlao002 csmajs  259 Oct 21 15:49 Makefile
+-rw------- 1 hlao002 csmajs 3056 Oct 21 15:49 README.md
+drwx------ 2 hlao002 csmajs 4096 Oct 21 16:04 src
+drwx------ 2 hlao002 csmajs 4096 Oct 21 16:05 test
+hlao002@hammer.cs.ucr.edu$ pwd
+/home/csmajs/hlao002/CS100/rshell
+hlao002@hammer.cs.ucr.edu$ ls -she ould - not - wo   work
+ls: invalid line width: ork
+hlao002@hammer.cs.ucr.edu$ #testing s commands with connectors
+hlao002@hammer.cs.ucr.edu$ mk di     mkdir rshell2 ; pwd;  ; rm  ls ; rmdir rshell2
+/home/csmajs/hlao002/CS100/rshell
+bin  LICENSE  Makefile	README.md  rshell2  src  test
+hlao002@hammer.cs.ucr.edu$ ls ; echo chesse its
+bin  LICENSE  Makefile	README.md  src	test
+chesse its
+hlao002@hammer.cs.ucr.edu$ echo irish wrist watch ; echp   o pie ; man chesse
+irish wrist watch
 pie
-chesse
-pwd &&&& echo cat
-/home/henry/Documents/CS100/rshell
-cat
-pwd && && echo dog
-pwd && && echo cat echo exit
-#testing          echo test         man pie &&   ** e    && echo ecis
-No manual entry for pie
-pwd && ls -a && mkdir cat && ls&& de  ma kdir dog &&d r rmdir cat && re mdir doc g
-/home/henry/Documents/CS100/rshell
-.  ..  bin  exec.script  .git  LICENSE	Makefile  README.md  src  test
-bin  cat  exec.script  LICENSE	Makefile  README.md  src  test
-#testing "||" conec  nc ectors
-man pie || echo cat
-No manual entry for pie
-cat
-echo cat || man pie
-cat
-pwd || echo cat || man pie
-/home/henry/Documents/CS100/rshell
-ma p  n cake || ecch  ho dog } || pws
+No manual entry for chesse
+hlao002@hammer.cs.ucr.edu$ #testing commands with "&&" connectors
+hlao002@hammer.cs.ucr.edu$ w pwd && echo pie
+/home/csmajs/hlao002/CS100/rshell
+pie
+hlao002@hammer.cs.ucr.edu$ pwd && echo pie && man cat ke && echo broken
+/home/csmajs/hlao002/CS100/rshell
+pie
 No manual entry for cake
+hlao002@hammer.cs.ucr.edu$ ls -a && echo chesse
+.  ..  bin  .git  LICENSE  Makefile  README.md	src  test
+chesse
+hlao002@hammer.cs.ucr.edu$ man pie && echo should not work
+No manual entry for pie
+hlao002@hammer.cs.ucr.edu$ #tesst  ting          
+hlao002@hammer.cs.ucr.edu$ #testing en  commands with connect  ors "||"
+hlao002@hammer.cs.ucr.edu$ 
+hlao002@hammer.cs.ucr.edu$ echo cat || man pie
+cat
+hlao002@hammer.cs.ucr.edu$ echo cat || eh  echo chesse
+cat
+hlao002@hammer.cs.ucr.edu$ mn   an pie || pwd
+No manual entry for pie
+/home/csmajs/hlao002/CS100/rshell
+hlao002@hammer.cs.ucr.edu$ man pie || man cake || djedk || echo cat
+No manual entry for pie
+No manual entry for cake
+execvp: No such file or directory
+cat
+hlao002@hammer.cs.ucr.edu$ man CE ATESJ || echo pie || man wait
+No manual entry for CATESJ
+pie
+hlao002@hammer.cs.ucr.edu$ man test ||           exit    man cake ||             echo pie || man wait || man pie
+pie
+hlao002@hammer.cs.ucr.edu$ #testing connectors p spacing with ot  commands
+hlao002@hammer.cs.ucr.edu$ ls -a; echo cat
+.  ..  bin  .git  LICENSE  Makefile  README.md	src  test
+cat
+hlao002@hammer.cs.ucr.edu$ pwd; echo pie;  ;         ; echo man  ;;  its good
+/home/csmajs/hlao002/CS100/rshell
+pie
+man
+execvp: No such file or directory
+hlao002@hammer.cs.ucr.edu$ a man pe ie&& echo cat
+No manual entry for pie
+hlao002@hammer.cs.ucr.edu$ m wait    echo cat     &&&                &     man pie       ex cho wa  vs&& echo dogs
+cat
+vs
+dogs
+hlao002@hammer.cs.ucr.edu$ && pie   echo ca          echo cat ||     || echo pie
+cat
+hlao002@hammer.cs.ucr.edu$ man waisd     sutf   tuu ff?     ||  echo pe ie
+No manual entry for stuff?
+pie
+hlao002@hammer.cs.ucr.edu$ man youuuuuu || man annd  || MEEE    echo pei  ie
+No manual entry for youuuuuu
+No manual entry for annd
+pie
+hlao002@hammer.cs.ucr.edu$ #tet sting incorrect placement of connectors and empty commands
+hlao002@hammer.cs.ucr.edu$ ;exit
+bash: syntax error near unexpected token ';'
+hlao002@hammer.cs.ucr.edu$ ;echo        echo cat
+bash: syntax error near unexpected token ';'
+hlao002@hammer.cs.ucr.edu$ ;echo cat    ; echo dog
+bash: syntax error near unexpected token ';'
+hlao002@hammer.cs.ucr.edu$ echo cat ; echo dog;;;   ;
+cat
 dog
-ls       ||     echo cat \   |  |echo dog
-bin  exec.script  LICENSE  Makefile  README.md	src  test
-man pie ||   echo cat \          man chicken \   |    |echo dog
+hlao002@hammer.cs.ucr.edu$ echo cat ;;; echo dog
+bash: syntax error near unexpected token ';'
+hlao002@hammer.cs.ucr.edu$ echo cat ;; echo dog
+bash: syntax error near unexpected token ';'
+hlao002@hammer.cs.ucr.edu$ ca  banana ; e   ca  echo chesse  e se; echo dog;;
+execvp: No such file or directory
+chesse
+dog
+hlao002@hammer.cs.ucr.edu$ && echo cat 
+bash: syntax error near unexpected token '&&'
+hlao002@hammer.cs.ucr.edu$ &&echo dog echo dog
+bash: syntax error near unexpected token '&&'
+hlao002@hammer.cs.ucr.edu$ &&echo || echo dog           &  & echo dog
+bash: syntax error near unexpected token '&&'
+hlao002@hammer.cs.ucr.edu$ || echo cat
+bash: syntax error near unexpected token '||'
+hlao002@hammer.cs.ucr.edu$ #test exit
+hlao002@hammer.cs.ucr.edu$ ;exit
+bash: syntax error near unexpected token ';'
+hlao002@hammer.cs.ucr.edu$ exi   echo cat || exit
+cat
+hlao002@hammer.cs.ucr.edu$ man pie || exit
 No manual entry for pie
-No manual entry for chicken
-No manual entry for |
-No manual entry for |echo
-No manual entry for dog
-#testing connectors being use together (behavior similar to READMD E.md info)
-echo cat && echo dog ; e cat   man pie
+~/CS100/rshell
+hlao002@hammer $ bin/rshell
+hlao002@hammer.cs.ucr.edu$ man   echo c cat && exit        && echo    echo dog    &&exit
+cat
+dog
+~/CS100/rshell
+hlao002@hammer $ binr[K/rshell
+hlao002@hammer.cs.ucr.edu$ exit;
+~/CS100/rshell
+hlao002@hammer $ bin/rh[Kshell
+hlao002@hammer.cs.ucr.edu$ ;
+hlao002@hammer.cs.ucr.edu$ # #test comments
+hlao002@hammer.cs.ucr.edu$ echo cat # && #echo dog
+cat
+hlao002@hammer.cs.ucr.edu$ pwd && echo cat && e    #&&echo dog
+/home/csmajs/hlao002/CS100/rshell
+cat
+hlao002@hammer.cs.ucr.edu$ #echo cat && echo dog
+hlao002@hammer.cs.ucr.edu$ #test use of differenet     rent connectors in same command (priority list                        
+hlao002@hammer.cs.ucr.edu$ #b (behavior should e be same as READM> E.md l   list)
+hlao002@hammer.cs.ucr.edu$ echo cat ;   && echo dog ; echo chesse
 cat && echo dog
-No manual entry for pie
-echo cat && pwd l ; man pie || exit
-cat && pwd
+chesse
+hlao002@hammer.cs.ucr.edu$ pwd & ; echo cat &&             e ls -a && echo cat
+/home/csmajs/hlao002/CS100/rshell
+ls: cannot access &&: No such file or directory
+ls: cannot access echo: No such file or directory
+ls: cannot access cat: No such file or directory
+hlao002@hammer.cs.ucr.edu$ pwd &&      man wait || e         pei    ie || man exit && echo cat
 No manual entry for pie
 No manual entry for ||
-[?1049h[?1h=EXIT(3)                    Linux Programmer's Manual                   EXIT(3)[m
-[m
-[1mNAME[0m[m
-       exit - cause normal process termination[m
-[m
-[1mSYNOPSIS[0m[m
-       [1m#include[0m [1m<stdlib.h>[0m[m
-[m
-       [1mvoid[0m [1mexit(int[0m [4mstatus[24m[1m);[0m[m
-[m
-[1mDESCRIPTION[0m[m
-       The  [1mexit[0m() function causes normal process termination and the value of[m
-       [4mstatus[24m [4m&[24m [4m0377[24m is returned to the parent (see [1mwait[0m(2)).[m
-[m
-       All functions registered with [1matexit[0m(3) and [1mon_exit[0m(3) are  called,  in[m
-       the  reverse  order  of their registration.  (It is possible for one of[m
-       these functions to use [1matexit[0m(3) or [1mon_exit[0m(3)  to  register  an  addi‐[m
-       tional  function  to be executed during exit processing; the new regis‐[m
-       tration is added to the front of the list of functions that  remain  to[m
-       be  called.)  If one of these functions does not return (e.g., it calls[m
-       [1m_exit[0m(2), or kills itself with a signal), then none  of  the  remaining[m
-       functions is called, and further exit processing (in particular, flush‐[m
-       ing of [1mstdio[0m(3) streams) is abandoned.  If a function has  been  regis‐[m
-[7m Manual page exit(3) line 1 (press h for help or q to quit)[27m[K[K[?1l>[?1049lecho cat &&  || dog && pie   ech   man   pie
-cat || dog
-No manual entry for pie
-cat || god ;;             echo cat || dog || dog;;
-#testing exit command
-exit
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
-;exit
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
-echo      mkdir cat && exit
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ ls
-[0m[01;34mbin[0m  [01;34mcat[0m  exec.script  LICENSE  Makefile  README.md  [01;34msrc[0m  [01;34mtest[0m
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ bin/rshell
-echo cat ||ex   exit
-cat
-echo dog || man pue  ie || d exit
-dog
-exit      man pie || exit
-No manual entry for pie
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ man[K[K[Kbin/rshell
-chicken ;;            chicken ; pie
-execvp: No such file or directory
-execvp: No such file or directory
-#testing command   ents
-echo cat # ; exit
-cat
-echo cat #
-cat
-echo cat #echo     dog
-cat
-echo cat# dog
-cat
-pwd # exit cat
-/home/henry/Documents/CS100/rshell
-pwd ;   && ls -a || exi      && "ex   #ex   exit
-/home/henry/Documents/CS100/rshell
-.  ..  bin  cat  exec.script  .git  LICENSE  Makefile  README.md  src  test
-pwd && hello man name djekdejdekjd d sjjs^[[D^[[D^[[D^[[D                 
-/home/henry/Documents/CS100/rshell
-execvp: No such file or directory
-pwd && echo cat #jdejesksjs
-/home/henry/Documents/CS100/rshell
-cat
-#testing done
-exit
-]0;henry@henry-S400CA: ~/Documents/CS100/rshellhenry@henry-S400CA:~/Documents/CS100/rshell$ exit
+7[?47h[?1h=man(1)                                                                  man(1)
+
+[1mNAME[m
+       man - format and display the on-line manual pages
+
+[1mSYNOPSIS[m
+       [1mman[m  [[1m-acdfFhkKtwW[m]  [[1m--path[m]  [[1m-m[m [4msystem[m] [[1m-p[m [4mstring[m] [[1m-C[m [4mconfig_file[m]
+       [[1m-M[m [4mpathlist[m] [[1m-P[m [4mpager[m] [[1m-B[m [4mbrowser[m] [[1m-H[m [4mhtmlpager[m] [[1m-S[m  [4msection_list[m]
+       [[4msection[m] [4mname[m [4m...[m
+
+[1mDESCRIPTION[m
+       [1mman[m formats and displays the on-line manual pages.  If you specify [4msec-[m
+       [4mtion[m, [1mman[m only looks in that section of the manual.  [4mname[m  is  normally
+       the  name of the manual page, which is typically the name of a command,
+       function, or file.  However, if [4mname[m contains  a  slash  ([1m/[m)  then  [1mman[m
+       interprets  it  as a file specification, so that you can do [1mman[m [1m./foo.5[m
+       or even [1mman[m [1m/cd/foo/bar.1.gz[m.
+
+       See below for a description of where [1mman[m  looks  for  the  manual  page
+       files.
+
+[1mMANUAL[m [1mSECTIONS[m
+       The standard sections of the manual include:
+:[K[K[?1l>[2J[?47l87[?47h[?1h=BASH_BUILTINS(1)                                              BASH_BUILTINS(1)
+
+[1mNAME[m
+       bash,  :,  .,  [, alias, bg, bind, break, builtin, caller, cd, command,
+       compgen, complete, compopt,  continue,  declare,  dirs,  disown,  echo,
+       enable,  eval,  exec, exit, export, false, fc, fg, getopts, hash, help,
+       history, jobs, kill, let, local, logout, mapfile, popd, printf,  pushd,
+       pwd,  read, readonly, return, set, shift, shopt, source, suspend, test,
+       times, trap, true, type, typeset, ulimit, umask, unalias, unset, wait -
+       bash built-in commands, see [1mbash[m(1)
+
+[1mBASH[m [1mBUILTIN[m [1mCOMMANDS[m
+       Unless otherwise noted, each builtin command documented in this section
+       as accepting options preceded by [1m-[m accepts [1m--[m to signify the end of the
+       options.   The  [1m:[m, [1mtrue[m, [1mfalse[m, and [1mtest[m builtins do not accept options
+       and do not treat [1m--[m specially.  The [1mexit[m, [1mlogout[m, [1mbreak[m, [1mcontinue[m, [1mlet[m,
+       and  [1mshift[m builtins accept and process arguments beginning with [1m-[m with-
+       out requiring [1m--[m.  Other builtins that accept  arguments  but  are  not
+       specified  as accepting options interpret arguments beginning with [1m-[m as
+       invalid options and require [1m--[m to prevent this interpretation.
+       [1m:[m [[4marguments[m]
+              No effect; the command does nothing beyond  expanding  [4marguments[m
+              and  performing any specified redirections.  A zero exit code is
+:[K[K[?1l>[2J[?47l8cat
+hlao002@hammer.cs.ucr.edu$ echo pie || echo cat && echo chesse
+pie || echo cat
+chesse
+hlao002@hammer.cs.ucr.edu$ #test complete
+hlao002@hammer.cs.ucr.edu$ exit
+~/CS100/rshell
+hlao002@hammer $ exit
 exit
 
-Script done on Tue 21 Oct 2014 02:19:56 PM PDT
+Script done on Tue 21 Oct 2014 04:40:19 PM PDT
