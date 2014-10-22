@@ -18,16 +18,14 @@ void replaceCntr (string &cmd,string sym,int dNum)
                 cmd.replace(found, dNum, " , ");
         }
 }
+
 void bash()
 {
 // Getting the hostname
 char hostname[128];
 gethostname(hostname,sizeof hostname);
-
-//Continue running bash till  "exit" is entered
 while(1)
 {
-
         cout << getlogin() << "@" << hostname << "$ ";
         string cmd;
         string connector;
@@ -66,22 +64,13 @@ while(1)
         }
         //Replace connectors with placeholders.
         if(colon || ands || ors)
-        {
+	{
                 replaceCntr(cmd,connector,dNum);
-                while(cmd[cmd.size()-1] == ' '|| cmd[cmd.size()-1] == ',')
-                {
-                        if(cmd[cmd.size()-1] == ' ')
+                while(cmd[cmd.size()-1] == ' ')
+              	{  
                                 cmd.erase(cmd.size()-1,1);
-                        if(cmd[cmd.size()-1] == ',' && cmd[cmd.size()-2] == ',')
-                        {
-                                cout << "bash: syntax error near unexpected token '" << connector << "'" << endl;
-                                bash();
-                                exit(0);
-                        }
-                        if(cmd[cmd.size()-1] == ',')
-                                cmd.erase(cmd.size()-1,1);
-                        }
                 }
+	}
         vector<string> tok;
         //Tokenizes userinput (now with "," as connector placeholders).
         char_separator<char> sep(",");
@@ -92,7 +81,7 @@ while(1)
         {
                 tok.push_back(*it);
         }
-        //test for multiple connector error using tokenized input vector.
+        //test fior multiple connector error using tokenized input vector.
         for(unsigned k=0;k<tok.size();k++)
         {
                 if(tok[0] == "," )
@@ -101,13 +90,13 @@ while(1)
                         bash();
                         exit(0);
                 }
-                else if(k>0 && (tok[k] == "," && tok[k-1] == ","))
+                if(k>0 && (tok[k] == "," && tok[k-1] == ","))
                 {
                         cout << "bash: syntax error near unexpected token '" << connector << "'" << endl;
                         bash();
                         exit(0);
                 }
-     }
+    	}
         // Tokenizes input with the removal of connectors and spaces.
         tokenizer<char_separator<char> > tokens(cmd, sep);
         tokenizer<char_separator<char> >::iterator it1=tokens.begin();
@@ -149,8 +138,7 @@ while(1)
                         delete[] Argv;
                         exit(1);
                 }
-
-                        else if(pid == 0)
+                else if(pid == 0)
                 {
                         //Test for fail execvp.
                         if(execvp(Argv[0], Argv) == -1)
@@ -164,8 +152,12 @@ while(1)
                 else
                 {
                         bool cs = true;
-                        //Update status.
-                        wait(&status);
+			//Update status.
+			if (-1 == wait(&status))
+			{
+				perror("waitpid");
+				exit(1);
+			}
                         //My child is a failure :[.
                         if(status > 0)
                         {
@@ -198,5 +190,4 @@ int main(int argc, char** argv)
 {
         bash();
         return 0;
-
 }
