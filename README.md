@@ -75,6 +75,9 @@ Limitations and Bugs
 ----------------------------------------------------------------------------------------------------
 -The bash command "echo" will only print out 1 space between arguments even if more spaces are used.
 
--Rshell cannot handle multiple types of connectors in a single user input, if more than one connector is used, rshell prioritize commands by (";" , "&&" , "||"), while treating other connectors as commands.
+-Rshell cannot handle multiple types of connectors in a single user input, if more than one connector is used, rshell prioritize commands by (";" >  "&&" > "||"), while treating other connectors as commands.
 
+-Rshell cannot treat "&" and "|" as "&&" and "||", instead, they will be treated like regular arguments
+	Example: "echo dogs &&& echo cat" will not result in an error.
 
+-Rshell cannot use the bash command "cd"
