@@ -81,3 +81,5 @@ Limitations and Bugs
 	Example: "echo dogs &&& echo cat" will not result in an error.
 
 -Rshell cannot use the bash command "cd"
+
+~
