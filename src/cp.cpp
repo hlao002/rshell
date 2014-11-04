@@ -48,7 +48,8 @@ int main(int argc, char *argv[])
 			perror("open");
 			exit(1);
 		}
-		int outfd = open(argv[2],O_WRONLY | O_CREAT);
+		//What the fuck?
+		int outfd = open(argv[2],O_WRONLY | O_CREAT, 0777);
 		if (outfd == -1)
 		{
 			perror("open");
