@@ -21,41 +21,39 @@ void outputColor(string files,struct stat s)
 	//Hidden Dir
 	if(files[0] == '.' && (s.st_mode & S_IFDIR))
 	{
-		printf("%c[%dm",0x1B,47);
-		printf("%c[%dm", 0x1B,34);
+		printf("%c[%dm",0x1B,100);
+		printf("%c[%dm", 0x1B,94);
 		cout << files;
-		printf("%c[%dm",0x1B,39);
-		printf("%c[%dm", 0x1B,49);
+		printf("%c[%dm",0x1B,0);
 	}
 	//Hidden exec
 	else if(files[0] == '.' && (s.st_mode & S_IXUSR))
 	{	
-		printf("%c[%dm",0x1B,47);
-		printf("%c[%dm", 0x1B,32);
+		printf("%c[%dm",0x1B,100);
+		printf("%c[%dm", 0x1B,92);
 		cout << files;
-		printf("%c[%dm",0x1B,39);
-		printf("%c[%dm", 0x1B,49);
+		printf("%c[%dm",0x1B,0);
 	}
 	//Hidden
 	else if(files[0] == '.')
 	{
-		printf("%c[%dm", 0x1B,47);
+		printf("%c[%dm", 0x1B,100);
 		cout << files;
-		printf("%c[%dm",0x1B,49);
+		printf("%c[%dm",0x1B,0);
 	}
 	//Dir
 	else if(s.st_mode & S_IFDIR)
 	{	
-		printf("%c[%dm", 0x1B,34);
+		printf("%c[%dm", 0x1B,94);
 		cout << files;
-		printf("%c[%dm",0x1B,39);
+		printf("%c[%dm",0x1B,0);
 	}
 	//exec
 	else if(s.st_mode & S_IXUSR)
 	{
-		printf("%c[%dm", 0x1B,32);
+		printf("%c[%dm", 0x1B,92);
 		cout << files;
-		printf("%c[%dm",0x1B,39);
+		printf("%c[%dm",0x1B,0);
 	}
 	//standard
 	else
