@@ -5,13 +5,19 @@ by Hon Lao (Henry Lao)
 
 Table of Contents
 ---------------------------------------------------------------------------------------------------
--Introduction
+RSHELL
+	-Introduction
+	-Installation
+	-Program Functions
+	-Limitations and Bugs
+LS
+	-Introduction
+	-Installation
+	-Program Functions
+	-Limitation and Bugs
 
--Installation
-
--Program Functions
-
--Limitations and Bugs
+-RSHELL
+---------------------------------------------------------------------------------------------------
 
 Introduction
 ---------------------------------------------------------------------------------------------------
@@ -31,7 +37,7 @@ To install and execute run rshell in Linux, enter the following commands into th
 
         4) make
 
-        5) bin.rshell
+        5) bin/rshell
 
 *Note: In order to correctly execute rshell, C++ boost library and g++ compiler must be installed in the OS.
 
@@ -82,4 +88,56 @@ Limitations and Bugs
 
 -Rshell cannot use the bash command "cd"
 
-~
+LS
+-------------------------------------------------------------------------------------------------------
+
+Introduction
+-------------------------------------------------------------------------------------------------------
+ls is a basic bash command program that replicates the ls bash command, ls is capable of running the flags (-a,-l,-R)
+
+Installation
+------------------------------------------------------------------------------------------------------
+To install and execute run ls in Linux, enter the following commands into the terminal:
+
+        1) git clone http://github.com/hlao002/rshell.git
+
+        2) cd rshell
+
+        3) git checkout hw1
+
+        4) make
+
+        5) bin/ls
+
+*Note: In order to correctly execute ls, g++ compiler must be installed in the OS.
+
+Program Functions
+---------------------------------------------------------------------------------------------------
+-ls supports the flags -l,-a,-R as well as multiple optional parameters
+
+-The flags and optional parameters can be inputed into the console in any order, as long as it is preceeded by a '-'
+
+	Example: bin/ls -alR, bin/ls parameter -lRa, bin/ls -la parameter.
+
+-The -a flag will output all files, including hidden ones.
+
+-The -l flag will output the files in a long listing format.
+
+-The -R flag will output the all files, as well as all files within those files.
+
+-The program will terminate after initial iteration
+
+-If no optional parameters are passed in, ls will output the files in the current directory
+
+-If a incorrect optional parameter is passed in, ls will terminate.
+
+-All hidden files will be printed with a gray background, all directories will be printed in blue font, and all executables will be printed in green font.
+
+
+
+Limitations and Bugs
+-------------------------------------------------------------------------------------------------------
+-The gray background outputted along with any hidden files will cover the entirety of the file name and proceeding empty space.
+-The flags can only be passed in exactly as they are stated, the lowercase of a capitalized flag will not work.
+-The program will terminate if the there is a instance of a optional parameter error, and will not continue to the second.
+
