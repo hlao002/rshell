@@ -138,6 +138,8 @@ Program Functions
 Limitations and Bugs
 -------------------------------------------------------------------------------------------------------
 -The gray background outputted along with any hidden files will cover the entirety of the file name and proceeding empty space.
+
 -The flags can only be passed in exactly as they are stated, the lowercase of a capitalized flag will not work.
+
 -The program will terminate if the there is a instance of a optional parameter error, and will not continue to the second.
 
