@@ -1,0 +1,3749 @@
+Script started on Tue 11 Nov 2014 07:47:37 PM PST
+~
+hlao002@hammer $ cs [K100
+[0;91m
+===============================================================================
+|                                                                             |
+| You have enabled settings specific for cs100.                               |
+|                                                                             |
+===============================================================================
+[0m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m cd CS100/rhsell[K[K[K[K[Kshell
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m valgrind --leak-check=yes my[K[Kbin/ls -alR
+==25434== Memcheck, a memory error detector
+==25434== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==25434== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==25434== Command: bin/ls -alR
+==25434== 
+.:
+total 40
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.git[39m[49m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+
+./bin:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git:
+total 48
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mbranches[39m
+-rw------- 1 hlao002 csmajs   258 Nov 04 20:48 config
+-rw------- 1 hlao002 csmajs    73 Nov 04 20:48 description
+-rw------- 1 hlao002 csmajs    23 Nov 04 20:48 HEAD
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mhooks[39m
+-rw------- 1 hlao002 csmajs   568 Nov 09 05:50 index
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mlogs[39m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [34mobjects[39m
+-rw------- 1 hlao002 csmajs   204 Nov 04 20:48 packed-refs
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/branches:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+
+./.git/hooks:
+total 48
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs   452 Nov 04 20:48 [32mapplypatch-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   896 Nov 04 20:48 [32mcommit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   189 Nov 04 20:48 [32mpost-update.sample[39m
+-rwx------ 1 hlao002 csmajs   398 Nov 04 20:48 [32mpre-applypatch.sample[39m
+-rwx------ 1 hlao002 csmajs  1635 Nov 04 20:48 [32mpre-commit.sample[39m
+-rwx------ 1 hlao002 csmajs  1239 Nov 04 20:48 [32mprepare-commit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs  1348 Nov 04 20:48 [32mpre-push.sample[39m
+-rwx------ 1 hlao002 csmajs  4951 Nov 04 20:48 [32mpre-rebase.sample[39m
+-rwx------ 1 hlao002 csmajs  3611 Nov 04 20:48 [32mupdate.sample[39m
+
+./.git/info:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   240 Nov 04 20:48 exclude
+
+./.git/logs:
+total 16
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/logs/refs:
+total 16
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+
+./.git/logs/refs/heads:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 master
+
+./.git/logs/refs/remotes:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/logs/refs/remotes/origin:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+
+./.git/objects:
+total 260
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m00[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m02[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m03[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m0e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m11[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m16[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m1c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m26[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m27[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m28[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m29[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m2e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m4a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m54[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m62[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m63[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m69[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m85[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m89[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m93[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m94[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m97[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m9b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb4[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mba[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcb[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcf[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md9[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mda[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mdd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34me6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mea[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf1[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mfe[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mpack[39m
+
+./.git/objects/00:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   182 Nov 04 20:48 c8dfe5f67a09206bbbeb8467061329bc9165d6
+
+./.git/objects/02:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   172 Nov 04 20:48 1abadb813badfb3154ce43576d6ef825840986
+
+./.git/objects/03:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1688 Nov 04 20:48 10997a0d1d0ffc5c390aa2531f16f64a140f76
+
+./.git/objects/0e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   142 Nov 04 20:48 442cc988d51fb24ad62041692002e0e61bde4a
+
+./.git/objects/11:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   158 Nov 04 20:48 6d57b0716cdaae27f825d70556fe37477d6fce
+
+./.git/objects/16:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   160 Nov 04 20:48 18a804c2ec64da1d75c7663cfaeb49f2d95895
+
+./.git/objects/1c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  2604 Nov 04 20:48 298e0db68f1355ae7bbbfeb395fb1c274a5a4f
+
+./.git/objects/26:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 7c3e3042e45b2be0a58e2b84262e830ed6053e
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 d376d5c794d04b40cd24ed2cb1f4019f8a67f3
+
+./.git/objects/27:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   217 Nov 04 20:48 ce8b1500ef140d3e681f6c54b4c58efc4e2f5a
+
+./.git/objects/28:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   137 Nov 04 20:48 1bab1cd079ae9443de233f1ea697fcd19fbe44
+
+./.git/objects/29:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   769 Nov 04 20:48 57ecf3a932f126f14df4c3fa1a1a59cb528162
+
+./.git/objects/2e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 33aba01f7461ac8fdd8d2937ebfdc3c667f7a0
+
+./.git/objects/3a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 02b497a521c2d420d3c0c596e05963b1d7766f
+
+./.git/objects/3b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   189 Nov 04 20:48 1c652bec3765a883e0295240006f5723065781
+
+./.git/objects/3e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 f2bfd7bfad71be5c34c29df06846d98c0a7ed9
+
+./.git/objects/4a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1125 Nov 04 20:48 af1ae35698410d8b7fba8488f86f2e1f169922
+
+./.git/objects/54:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 4739d9455b86194541bdc37ab5f6bd6f01d8e7
+
+./.git/objects/5c:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 be1a4cf7ee8c84a06f4b6edf36601b8cac9f72
+
+./.git/objects/5f:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1204 Nov 04 20:48 bf054c7bf8036d7d4be8fe6601c3adcf4a89e2
+
+./.git/objects/62:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 fefb8bf3b850da1dcfa3a491bad9fbf3bf5627
+
+./.git/objects/63:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   150 Nov 04 20:48 a878138882c212605f2813757dd1d6e59be650
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 cb0aa21aeaf2488726b5c490db13adcab8a3bf
+
+./.git/objects/69:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 1b815d95cef8706e7d55feb0a4cd4a1248954b
+
+./.git/objects/6a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   110 Nov 04 20:48 13ff4c2c5a8ebc13182b38bf2a53fbf7e62349
+
+./.git/objects/6b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 f1aac3b0feff9c364846e744c7dd3ed7b6787c
+
+./.git/objects/7c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   744 Nov 04 20:48 cccac3eb3dda470b2818062f159322982431d3
+
+./.git/objects/7e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   758 Nov 04 20:48 f29c65af12f3224cdbcd382feb66b7a4e31d48
+
+./.git/objects/85:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 9e9d687e78ebaa98de127f58faf6fe94c4b369
+
+./.git/objects/89:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1923 Nov 04 20:48 5eb99d3174cbfa0dec73801af48afb99314425
+
+./.git/objects/8c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 f192bcc9b910307a254edfa1c1b36eebc15893
+
+./.git/objects/8f:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 3f5a26f68b1929d658740ac6be6f32c3da87b1
+
+./.git/objects/93:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 650800f69c78b101525256951707ac3b1341aa
+-r-------- 1 hlao002 csmajs  1208 Nov 04 20:48 b093f4635577276af3509e420a39a83a25bec0
+
+./.git/objects/94:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 a04400f7cfd1617f25c137060344f7d65659b0
+
+./.git/objects/97:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 d602bc6c03121f9e9bbdfd9e59be320dc53b43
+
+./.git/objects/9b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 c48feb2552f1d055acd8b0f72e3e761dbdb28e
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 d3826727e22d874583c37063e60df731df68e4
+
+./.git/objects/a5:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 bb4934d9aea5f8cb3ee7e24ea61d7c2c89ad68
+
+./.git/objects/a7:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 59111e2fbc50d3760e6193d2c9e4f512a197de
+
+./.git/objects/a8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 f7ba19d9fc5b3b2661c18fa9a467dceccb838f
+
+./.git/objects/b0:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 35b69dfc0206b429c434b2e20f948efe4bcb73
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 7bf828595fd2f71148334a5c705f6679e947df
+
+./.git/objects/b4:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1831 Nov 04 20:48 e7713f7a8652a4d6253834da634accbb04f489
+
+./.git/objects/b5:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1123 Nov 04 20:48 8bcd913f3123e2b5f9fa69293dd6dc9affd786
+
+./.git/objects/b8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 751e0c2b1493efc5d3c9d7883af7e313fca477
+
+./.git/objects/ba:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8f1654fdb49f7ad05a2d7bbbebc41da862c9f4
+
+./.git/objects/c3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3754 Nov 04 20:48 7b4302001491afb37fba635cfdef38bdd3fe8e
+
+./.git/objects/c6:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8159ffc935629be4dc863bd60807042d474de8
+
+./.git/objects/c7:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    51 Nov 04 20:48 0705dbeb206c8c923c187746c1e72ab85777b4
+
+./.git/objects/c8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1895 Nov 04 20:48 06c5757192c86126e1973d9257bee88e711bca
+
+./.git/objects/cb:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 73211d17f55ea62cd07b2ed93d8273b00d8630
+
+./.git/objects/cc:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 81a72b07bad90a115db6ee58adf5790bd42169
+
+./.git/objects/cd:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 fff38f8eb33ade4c0a2eb5e738a4b16b9cda0f
+
+./.git/objects/cf:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   208 Nov 04 20:48 1dc72af7913734933ce863322688d66ef6668f
+
+./.git/objects/d0:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 cd4d449fbaabba53161a5c4e5b68dd3cdaf6de
+
+./.git/objects/d3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 fa57be0cdb799754ac13b0b483ad34dff347d3
+
+./.git/objects/d5:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    79 Nov 04 20:48 6c97c32df425d9f63eb56b71abb1f65f3fbaa1
+-r-------- 1 hlao002 csmajs   151 Nov 04 20:48 ae156dde2dafc296b679f8eb73c20f9d602b70
+
+./.git/objects/d9:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 1b755d065551b07508d3297d03d5fc3df6ad45
+
+./.git/objects/da:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   166 Nov 04 20:48 c1679581f21fe019f4ce5835d6c83f1788d7cc
+-r-------- 1 hlao002 csmajs    88 Nov 04 20:48 fb13af5fe55d5dcb029f845eea38f47bf5cdf6
+
+./.git/objects/dd:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   149 Nov 04 20:48 c8031a548852b0794fcd59122c6733efb07ca3
+
+./.git/objects/e6:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1523 Nov 04 20:48 304a3021baa9ba5013154053d4e7f2d50cc1ae
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 976b31f1101e3938ab5fe44f2e5a951da9b972
+-r-------- 1 hlao002 csmajs    15 Nov 04 20:48 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/ea:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3176 Nov 04 20:48 f27923f03cfa81ec3345a946b34945c2ec471b
+
+./.git/objects/f1:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 409764ea2ff8b6ed70f45b6b93dc21060ac7cd
+
+./.git/objects/f3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   157 Nov 04 20:48 ae52065d984b1e2721a44c809a233d3c9ad5b7
+
+./.git/objects/fe:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   174 Nov 04 20:48 8ff24318cc4dab1a55324e9797eb1e8b71f6de
+
+./.git/objects/info:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./.git/objects/pack:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./.git/refs:
+total 20
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mtags[39m
+
+./.git/refs/heads:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    41 Nov 04 20:48 master
+
+./.git/refs/remotes:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/refs/remotes/origin:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    32 Nov 04 20:48 HEAD
+
+./.git/refs/tags:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./src:
+total 92
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 51812 Nov 09 14:11 [32ma.out[39m
+-rw------- 1 hlao002 csmajs  2085 Nov 04 20:48 cp.cpp
+-rw------- 1 hlao002 csmajs  6266 Nov 09 02:07 hw0.cpp
+-rw------- 1 hlao002 csmajs  5338 Nov 09 19:07 ls2.cpp
+-rw------- 1 hlao002 csmajs  7440 Nov 11 19:45 ls.cpp
+-rw------- 1 hlao002 csmajs  2701 Nov 04 20:48 Timer.h
+
+./test:
+total 28
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs 17743 Nov 04 20:48 exec.script
+-rw------- 1 hlao002 csmajs     0 Nov 11 19:46 ls.script
+==25434== 
+==25434== HEAP SUMMARY:
+==25434==     in use at exit: 0 bytes in 0 blocks
+==25434==   total heap usage: 14,701 allocs, 14,701 frees, 16,613,753 bytes allocated
+==25434== 
+==25434== All heap blocks were freed -- no leaks are possible
+==25434== 
+==25434== For counts of detected and suppressed errors, rerun with: -v
+==25434== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls
+[34mbin        [39mLICENSE    Makefile   README.md  [34msrc        [39m[34mtest       [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -a
+[47m[34m.          [39m[49m[47m[34m..         [39m[49m[34mbin        [39m[47m[34m.git       [39m[49mLICENSE    Makefile   README.md  
+[34msrc        [39m[34mtest       [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -a[Kl
+total 28
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -l[KR
+.:
+[34mbin        [39mLICENSE    Makefile   README.md  [34msrc        [39m[34mtest       [39m
+
+./bin:
+[32mcp      [39m[32mls      [39m[32mrshell  [39m
+
+./src:
+[32ma.out    [39mcp.cpp   hw0.cpp  ls2.cpp  ls.cpp   Timer.h  
+
+./test:
+exec.script  ls.script    
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -R[Kal
+total 40
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.git[39m[49m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -al[KR
+.:
+[47m[34m.          [39m[49m[47m[34m..         [39m[49m[34mbin        [39m[47m[34m.git       [39m[49mLICENSE    Makefile   README.md  
+[34msrc        [39m[34mtest       [39m
+
+./bin:
+[47m[34m.       [39m[49m[47m[34m..      [39m[49m[32mcp      [39m[32mls      [39m[32mrshell  [39m
+
+./.git:
+[47m[34m.            [39m[49m[47m[34m..           [39m[49m[34mbranches     [39mconfig       description  HEAD         
+[34mhooks        [39mindex        [34minfo         [39m[34mlogs         [39m[34mobjects      [39mpacked-refs  
+[34mrefs         [39m
+
+./.git/branches:
+[47m[34m.   [39m[49m[47m[34m..  [39m[49m
+
+./.git/hooks:
+[47m[34m.                          [39m[49m[47m[34m..                         [39m[49m
+[32mapplypatch-msg.sample      [39m[32mcommit-msg.sample          [39m
+[32mpost-update.sample         [39m[32mpre-applypatch.sample      [39m
+[32mpre-commit.sample          [39m[32mprepare-commit-msg.sample  [39m
+[32mpre-push.sample            [39m[32mpre-rebase.sample          [39m
+[32mupdate.sample              [39m
+
+./.git/info:
+[47m[34m.        [39m[49m[47m[34m..       [39m[49mexclude  
+
+./.git/logs:
+[47m[34m.     [39m[49m[47m[34m..    [39m[49mHEAD  [34mrefs  [39m
+
+./.git/logs/refs:
+[47m[34m.        [39m[49m[47m[34m..       [39m[49m[34mheads    [39m[34mremotes  [39m
+
+./.git/logs/refs/heads:
+[47m[34m.       [39m[49m[47m[34m..      [39m[49mmaster  
+
+./.git/logs/refs/remotes:
+[47m[34m.       [39m[49m[47m[34m..      [39m[49m[34morigin  [39m
+
+./.git/logs/refs/remotes/origin:
+[47m[34m.     [39m[49m[47m[34m..    [39m[49mHEAD  
+
+./.git/objects:
+[47m[34m.     [39m[49m[47m[34m..    [39m[49m[34m00    [39m[34m02    [39m[34m03    [39m[34m0e    [39m[34m11    [39m[34m16    [39m[34m1c    [39m[34m26    [39m[34m27    [39m[34m28    [39m[34m29    [39m
+[34m2e    [39m[34m3a    [39m[34m3b    [39m[34m3e    [39m[34m4a    [39m[34m54    [39m[34m5c    [39m[34m5f    [39m[34m62    [39m[34m63    [39m[34m69    [39m[34m6a    [39m[34m6b    [39m
+[34m7c    [39m[34m7e    [39m[34m85    [39m[34m89    [39m[34m8c    [39m[34m8f    [39m[34m93    [39m[34m94    [39m[34m97    [39m[34m9b    [39m[34ma5    [39m[34ma7    [39m[34ma8    [39m
+[34mb0    [39m[34mb4    [39m[34mb5    [39m[34mb8    [39m[34mba    [39m[34mc3    [39m[34mc6    [39m[34mc7    [39m[34mc8    [39m[34mcb    [39m[34mcc    [39m[34mcd    [39m[34mcf    [39m
+[34md0    [39m[34md3    [39m[34md5    [39m[34md9    [39m[34mda    [39m[34mdd    [39m[34me6    [39m[34mea    [39m[34mf1    [39m[34mf3    [39m[34mfe    [39m[34minfo  [39m[34mpack  [39m
+
+./.git/objects/00:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+c8dfe5f67a09206bbbeb8467061329bc9165d6  
+
+./.git/objects/02:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+1abadb813badfb3154ce43576d6ef825840986  
+
+./.git/objects/03:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+10997a0d1d0ffc5c390aa2531f16f64a140f76  
+
+./.git/objects/0e:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+442cc988d51fb24ad62041692002e0e61bde4a  
+
+./.git/objects/11:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+6d57b0716cdaae27f825d70556fe37477d6fce  
+
+./.git/objects/16:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+18a804c2ec64da1d75c7663cfaeb49f2d95895  
+
+./.git/objects/1c:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+298e0db68f1355ae7bbbfeb395fb1c274a5a4f  
+
+./.git/objects/26:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+7c3e3042e45b2be0a58e2b84262e830ed6053e  d376d5c794d04b40cd24ed2cb1f4019f8a67f3  
+
+./.git/objects/27:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+ce8b1500ef140d3e681f6c54b4c58efc4e2f5a  
+
+./.git/objects/28:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+1bab1cd079ae9443de233f1ea697fcd19fbe44  
+
+./.git/objects/29:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+57ecf3a932f126f14df4c3fa1a1a59cb528162  
+
+./.git/objects/2e:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+33aba01f7461ac8fdd8d2937ebfdc3c667f7a0  
+
+./.git/objects/3a:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+02b497a521c2d420d3c0c596e05963b1d7766f  
+
+./.git/objects/3b:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+1c652bec3765a883e0295240006f5723065781  
+
+./.git/objects/3e:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+f2bfd7bfad71be5c34c29df06846d98c0a7ed9  
+
+./.git/objects/4a:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+af1ae35698410d8b7fba8488f86f2e1f169922  
+
+./.git/objects/54:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+4739d9455b86194541bdc37ab5f6bd6f01d8e7  
+
+./.git/objects/5c:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+be1a4cf7ee8c84a06f4b6edf36601b8cac9f72  
+
+./.git/objects/5f:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+bf054c7bf8036d7d4be8fe6601c3adcf4a89e2  
+
+./.git/objects/62:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+fefb8bf3b850da1dcfa3a491bad9fbf3bf5627  
+
+./.git/objects/63:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+a878138882c212605f2813757dd1d6e59be650  cb0aa21aeaf2488726b5c490db13adcab8a3bf  
+
+./.git/objects/69:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+1b815d95cef8706e7d55feb0a4cd4a1248954b  
+
+./.git/objects/6a:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+13ff4c2c5a8ebc13182b38bf2a53fbf7e62349  
+
+./.git/objects/6b:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+f1aac3b0feff9c364846e744c7dd3ed7b6787c  
+
+./.git/objects/7c:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+cccac3eb3dda470b2818062f159322982431d3  
+
+./.git/objects/7e:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+f29c65af12f3224cdbcd382feb66b7a4e31d48  
+
+./.git/objects/85:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+9e9d687e78ebaa98de127f58faf6fe94c4b369  
+
+./.git/objects/89:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+5eb99d3174cbfa0dec73801af48afb99314425  
+
+./.git/objects/8c:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+f192bcc9b910307a254edfa1c1b36eebc15893  
+
+./.git/objects/8f:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+3f5a26f68b1929d658740ac6be6f32c3da87b1  
+
+./.git/objects/93:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+650800f69c78b101525256951707ac3b1341aa  b093f4635577276af3509e420a39a83a25bec0  
+
+./.git/objects/94:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+a04400f7cfd1617f25c137060344f7d65659b0  
+
+./.git/objects/97:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+d602bc6c03121f9e9bbdfd9e59be320dc53b43  
+
+./.git/objects/9b:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+c48feb2552f1d055acd8b0f72e3e761dbdb28e  d3826727e22d874583c37063e60df731df68e4  
+
+./.git/objects/a5:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+bb4934d9aea5f8cb3ee7e24ea61d7c2c89ad68  
+
+./.git/objects/a7:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+59111e2fbc50d3760e6193d2c9e4f512a197de  
+
+./.git/objects/a8:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+f7ba19d9fc5b3b2661c18fa9a467dceccb838f  
+
+./.git/objects/b0:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+35b69dfc0206b429c434b2e20f948efe4bcb73  7bf828595fd2f71148334a5c705f6679e947df  
+
+./.git/objects/b4:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+e7713f7a8652a4d6253834da634accbb04f489  
+
+./.git/objects/b5:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+8bcd913f3123e2b5f9fa69293dd6dc9affd786  
+
+./.git/objects/b8:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+751e0c2b1493efc5d3c9d7883af7e313fca477  
+
+./.git/objects/ba:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+8f1654fdb49f7ad05a2d7bbbebc41da862c9f4  
+
+./.git/objects/c3:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+7b4302001491afb37fba635cfdef38bdd3fe8e  
+
+./.git/objects/c6:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+8159ffc935629be4dc863bd60807042d474de8  
+
+./.git/objects/c7:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+0705dbeb206c8c923c187746c1e72ab85777b4  
+
+./.git/objects/c8:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+06c5757192c86126e1973d9257bee88e711bca  
+
+./.git/objects/cb:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+73211d17f55ea62cd07b2ed93d8273b00d8630  
+
+./.git/objects/cc:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+81a72b07bad90a115db6ee58adf5790bd42169  
+
+./.git/objects/cd:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+fff38f8eb33ade4c0a2eb5e738a4b16b9cda0f  
+
+./.git/objects/cf:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+1dc72af7913734933ce863322688d66ef6668f  
+
+./.git/objects/d0:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+cd4d449fbaabba53161a5c4e5b68dd3cdaf6de  
+
+./.git/objects/d3:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+fa57be0cdb799754ac13b0b483ad34dff347d3  
+
+./.git/objects/d5:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+6c97c32df425d9f63eb56b71abb1f65f3fbaa1  ae156dde2dafc296b679f8eb73c20f9d602b70  
+
+./.git/objects/d9:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+1b755d065551b07508d3297d03d5fc3df6ad45  
+
+./.git/objects/da:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+c1679581f21fe019f4ce5835d6c83f1788d7cc  fb13af5fe55d5dcb029f845eea38f47bf5cdf6  
+
+./.git/objects/dd:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+c8031a548852b0794fcd59122c6733efb07ca3  
+
+./.git/objects/e6:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+304a3021baa9ba5013154053d4e7f2d50cc1ae  976b31f1101e3938ab5fe44f2e5a951da9b972  
+9de29bb2d1d6434b8b29ae775ad8c2e48c5391  
+
+./.git/objects/ea:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+f27923f03cfa81ec3345a946b34945c2ec471b  
+
+./.git/objects/f1:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+409764ea2ff8b6ed70f45b6b93dc21060ac7cd  
+
+./.git/objects/f3:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+ae52065d984b1e2721a44c809a233d3c9ad5b7  
+
+./.git/objects/fe:
+[47m[34m.                                       [39m[49m[47m[34m..                                      [39m[49m
+8ff24318cc4dab1a55324e9797eb1e8b71f6de  
+
+./.git/objects/info:
+[47m[34m.   [39m[49m[47m[34m..  [39m[49m
+
+./.git/objects/pack:
+[47m[34m.   [39m[49m[47m[34m..  [39m[49m
+
+./.git/refs:
+[47m[34m.        [39m[49m[47m[34m..       [39m[49m[34mheads    [39m[34mremotes  [39m[34mtags     [39m
+
+./.git/refs/heads:
+[47m[34m.       [39m[49m[47m[34m..      [39m[49mmaster  
+
+./.git/refs/remotes:
+[47m[34m.       [39m[49m[47m[34m..      [39m[49m[34morigin  [39m
+
+./.git/refs/remotes/origin:
+[47m[34m.     [39m[49m[47m[34m..    [39m[49mHEAD  
+
+./.git/refs/tags:
+[47m[34m.   [39m[49m[47m[34m..  [39m[49m
+
+./src:
+[47m[34m.        [39m[49m[47m[34m..       [39m[49m[32ma.out    [39mcp.cpp   hw0.cpp  ls2.cpp  ls.cpp   Timer.h  
+
+./test:
+[47m[34m.            [39m[49m[47m[34m..           [39m[49mexec.script  ls.script    
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -aR[K[KlR
+.:
+total 28
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+
+./bin:
+total 116
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./src:
+total 84
+-rwx------ 1 hlao002 csmajs 51812 Nov 09 14:11 [32ma.out[39m
+-rw------- 1 hlao002 csmajs  2085 Nov 04 20:48 cp.cpp
+-rw------- 1 hlao002 csmajs  6266 Nov 09 02:07 hw0.cpp
+-rw------- 1 hlao002 csmajs  5338 Nov 09 19:07 ls2.cpp
+-rw------- 1 hlao002 csmajs  7440 Nov 11 19:45 ls.cpp
+-rw------- 1 hlao002 csmajs  2701 Nov 04 20:48 Timer.h
+
+./test:
+total 52
+-rw------- 1 hlao002 csmajs 17743 Nov 04 20:48 exec.script
+-rw------- 1 hlao002 csmajs 32768 Nov 11 19:48 ls.script
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -lR[Ka
+total 40
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.git[39m[49m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -laR
+.:
+total 40
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.git[39m[49m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+
+./bin:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git:
+total 48
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mbranches[39m
+-rw------- 1 hlao002 csmajs   258 Nov 04 20:48 config
+-rw------- 1 hlao002 csmajs    73 Nov 04 20:48 description
+-rw------- 1 hlao002 csmajs    23 Nov 04 20:48 HEAD
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mhooks[39m
+-rw------- 1 hlao002 csmajs   568 Nov 09 05:50 index
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mlogs[39m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [34mobjects[39m
+-rw------- 1 hlao002 csmajs   204 Nov 04 20:48 packed-refs
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/branches:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+
+./.git/hooks:
+total 48
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs   452 Nov 04 20:48 [32mapplypatch-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   896 Nov 04 20:48 [32mcommit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   189 Nov 04 20:48 [32mpost-update.sample[39m
+-rwx------ 1 hlao002 csmajs   398 Nov 04 20:48 [32mpre-applypatch.sample[39m
+-rwx------ 1 hlao002 csmajs  1635 Nov 04 20:48 [32mpre-commit.sample[39m
+-rwx------ 1 hlao002 csmajs  1239 Nov 04 20:48 [32mprepare-commit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs  1348 Nov 04 20:48 [32mpre-push.sample[39m
+-rwx------ 1 hlao002 csmajs  4951 Nov 04 20:48 [32mpre-rebase.sample[39m
+-rwx------ 1 hlao002 csmajs  3611 Nov 04 20:48 [32mupdate.sample[39m
+
+./.git/info:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   240 Nov 04 20:48 exclude
+
+./.git/logs:
+total 16
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/logs/refs:
+total 16
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+
+./.git/logs/refs/heads:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 master
+
+./.git/logs/refs/remotes:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/logs/refs/remotes/origin:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+
+./.git/objects:
+total 260
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m00[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m02[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m03[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m0e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m11[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m16[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m1c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m26[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m27[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m28[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m29[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m2e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m4a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m54[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m62[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m63[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m69[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m85[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m89[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m93[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m94[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m97[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m9b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb4[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mba[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcb[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcf[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md9[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mda[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mdd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34me6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mea[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf1[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mfe[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mpack[39m
+
+./.git/objects/00:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   182 Nov 04 20:48 c8dfe5f67a09206bbbeb8467061329bc9165d6
+
+./.git/objects/02:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   172 Nov 04 20:48 1abadb813badfb3154ce43576d6ef825840986
+
+./.git/objects/03:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1688 Nov 04 20:48 10997a0d1d0ffc5c390aa2531f16f64a140f76
+
+./.git/objects/0e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   142 Nov 04 20:48 442cc988d51fb24ad62041692002e0e61bde4a
+
+./.git/objects/11:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   158 Nov 04 20:48 6d57b0716cdaae27f825d70556fe37477d6fce
+
+./.git/objects/16:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   160 Nov 04 20:48 18a804c2ec64da1d75c7663cfaeb49f2d95895
+
+./.git/objects/1c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  2604 Nov 04 20:48 298e0db68f1355ae7bbbfeb395fb1c274a5a4f
+
+./.git/objects/26:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 7c3e3042e45b2be0a58e2b84262e830ed6053e
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 d376d5c794d04b40cd24ed2cb1f4019f8a67f3
+
+./.git/objects/27:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   217 Nov 04 20:48 ce8b1500ef140d3e681f6c54b4c58efc4e2f5a
+
+./.git/objects/28:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   137 Nov 04 20:48 1bab1cd079ae9443de233f1ea697fcd19fbe44
+
+./.git/objects/29:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   769 Nov 04 20:48 57ecf3a932f126f14df4c3fa1a1a59cb528162
+
+./.git/objects/2e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 33aba01f7461ac8fdd8d2937ebfdc3c667f7a0
+
+./.git/objects/3a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 02b497a521c2d420d3c0c596e05963b1d7766f
+
+./.git/objects/3b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   189 Nov 04 20:48 1c652bec3765a883e0295240006f5723065781
+
+./.git/objects/3e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 f2bfd7bfad71be5c34c29df06846d98c0a7ed9
+
+./.git/objects/4a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1125 Nov 04 20:48 af1ae35698410d8b7fba8488f86f2e1f169922
+
+./.git/objects/54:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 4739d9455b86194541bdc37ab5f6bd6f01d8e7
+
+./.git/objects/5c:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 be1a4cf7ee8c84a06f4b6edf36601b8cac9f72
+
+./.git/objects/5f:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1204 Nov 04 20:48 bf054c7bf8036d7d4be8fe6601c3adcf4a89e2
+
+./.git/objects/62:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 fefb8bf3b850da1dcfa3a491bad9fbf3bf5627
+
+./.git/objects/63:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   150 Nov 04 20:48 a878138882c212605f2813757dd1d6e59be650
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 cb0aa21aeaf2488726b5c490db13adcab8a3bf
+
+./.git/objects/69:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 1b815d95cef8706e7d55feb0a4cd4a1248954b
+
+./.git/objects/6a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   110 Nov 04 20:48 13ff4c2c5a8ebc13182b38bf2a53fbf7e62349
+
+./.git/objects/6b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 f1aac3b0feff9c364846e744c7dd3ed7b6787c
+
+./.git/objects/7c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   744 Nov 04 20:48 cccac3eb3dda470b2818062f159322982431d3
+
+./.git/objects/7e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   758 Nov 04 20:48 f29c65af12f3224cdbcd382feb66b7a4e31d48
+
+./.git/objects/85:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 9e9d687e78ebaa98de127f58faf6fe94c4b369
+
+./.git/objects/89:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1923 Nov 04 20:48 5eb99d3174cbfa0dec73801af48afb99314425
+
+./.git/objects/8c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 f192bcc9b910307a254edfa1c1b36eebc15893
+
+./.git/objects/8f:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 3f5a26f68b1929d658740ac6be6f32c3da87b1
+
+./.git/objects/93:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 650800f69c78b101525256951707ac3b1341aa
+-r-------- 1 hlao002 csmajs  1208 Nov 04 20:48 b093f4635577276af3509e420a39a83a25bec0
+
+./.git/objects/94:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 a04400f7cfd1617f25c137060344f7d65659b0
+
+./.git/objects/97:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 d602bc6c03121f9e9bbdfd9e59be320dc53b43
+
+./.git/objects/9b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 c48feb2552f1d055acd8b0f72e3e761dbdb28e
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 d3826727e22d874583c37063e60df731df68e4
+
+./.git/objects/a5:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 bb4934d9aea5f8cb3ee7e24ea61d7c2c89ad68
+
+./.git/objects/a7:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 59111e2fbc50d3760e6193d2c9e4f512a197de
+
+./.git/objects/a8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 f7ba19d9fc5b3b2661c18fa9a467dceccb838f
+
+./.git/objects/b0:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 35b69dfc0206b429c434b2e20f948efe4bcb73
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 7bf828595fd2f71148334a5c705f6679e947df
+
+./.git/objects/b4:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1831 Nov 04 20:48 e7713f7a8652a4d6253834da634accbb04f489
+
+./.git/objects/b5:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1123 Nov 04 20:48 8bcd913f3123e2b5f9fa69293dd6dc9affd786
+
+./.git/objects/b8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 751e0c2b1493efc5d3c9d7883af7e313fca477
+
+./.git/objects/ba:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8f1654fdb49f7ad05a2d7bbbebc41da862c9f4
+
+./.git/objects/c3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3754 Nov 04 20:48 7b4302001491afb37fba635cfdef38bdd3fe8e
+
+./.git/objects/c6:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8159ffc935629be4dc863bd60807042d474de8
+
+./.git/objects/c7:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    51 Nov 04 20:48 0705dbeb206c8c923c187746c1e72ab85777b4
+
+./.git/objects/c8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1895 Nov 04 20:48 06c5757192c86126e1973d9257bee88e711bca
+
+./.git/objects/cb:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 73211d17f55ea62cd07b2ed93d8273b00d8630
+
+./.git/objects/cc:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 81a72b07bad90a115db6ee58adf5790bd42169
+
+./.git/objects/cd:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 fff38f8eb33ade4c0a2eb5e738a4b16b9cda0f
+
+./.git/objects/cf:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   208 Nov 04 20:48 1dc72af7913734933ce863322688d66ef6668f
+
+./.git/objects/d0:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 cd4d449fbaabba53161a5c4e5b68dd3cdaf6de
+
+./.git/objects/d3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 fa57be0cdb799754ac13b0b483ad34dff347d3
+
+./.git/objects/d5:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    79 Nov 04 20:48 6c97c32df425d9f63eb56b71abb1f65f3fbaa1
+-r-------- 1 hlao002 csmajs   151 Nov 04 20:48 ae156dde2dafc296b679f8eb73c20f9d602b70
+
+./.git/objects/d9:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 1b755d065551b07508d3297d03d5fc3df6ad45
+
+./.git/objects/da:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   166 Nov 04 20:48 c1679581f21fe019f4ce5835d6c83f1788d7cc
+-r-------- 1 hlao002 csmajs    88 Nov 04 20:48 fb13af5fe55d5dcb029f845eea38f47bf5cdf6
+
+./.git/objects/dd:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   149 Nov 04 20:48 c8031a548852b0794fcd59122c6733efb07ca3
+
+./.git/objects/e6:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1523 Nov 04 20:48 304a3021baa9ba5013154053d4e7f2d50cc1ae
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 976b31f1101e3938ab5fe44f2e5a951da9b972
+-r-------- 1 hlao002 csmajs    15 Nov 04 20:48 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/ea:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3176 Nov 04 20:48 f27923f03cfa81ec3345a946b34945c2ec471b
+
+./.git/objects/f1:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 409764ea2ff8b6ed70f45b6b93dc21060ac7cd
+
+./.git/objects/f3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   157 Nov 04 20:48 ae52065d984b1e2721a44c809a233d3c9ad5b7
+
+./.git/objects/fe:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   174 Nov 04 20:48 8ff24318cc4dab1a55324e9797eb1e8b71f6de
+
+./.git/objects/info:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./.git/objects/pack:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./.git/refs:
+total 20
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mtags[39m
+
+./.git/refs/heads:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    41 Nov 04 20:48 master
+
+./.git/refs/remotes:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/refs/remotes/origin:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    32 Nov 04 20:48 HEAD
+
+./.git/refs/tags:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./src:
+total 92
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 51812 Nov 09 14:11 [32ma.out[39m
+-rw------- 1 hlao002 csmajs  2085 Nov 04 20:48 cp.cpp
+-rw------- 1 hlao002 csmajs  6266 Nov 09 02:07 hw0.cpp
+-rw------- 1 hlao002 csmajs  5338 Nov 09 19:07 ls2.cpp
+-rw------- 1 hlao002 csmajs  7440 Nov 11 19:45 ls.cpp
+-rw------- 1 hlao002 csmajs  2701 Nov 04 20:48 Timer.h
+
+./test:
+total 92
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs 17743 Nov 04 20:48 exec.script
+-rw------- 1 hlao002 csmajs 65536 Nov 11 19:48 ls.script
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -laR[K[K      -a   -R -R -a -l -a
+.:
+total 40
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.git[39m[49m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+
+./bin:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git:
+total 48
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mbranches[39m
+-rw------- 1 hlao002 csmajs   258 Nov 04 20:48 config
+-rw------- 1 hlao002 csmajs    73 Nov 04 20:48 description
+-rw------- 1 hlao002 csmajs    23 Nov 04 20:48 HEAD
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mhooks[39m
+-rw------- 1 hlao002 csmajs   568 Nov 09 05:50 index
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mlogs[39m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [34mobjects[39m
+-rw------- 1 hlao002 csmajs   204 Nov 04 20:48 packed-refs
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/branches:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+
+./.git/hooks:
+total 48
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs   452 Nov 04 20:48 [32mapplypatch-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   896 Nov 04 20:48 [32mcommit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   189 Nov 04 20:48 [32mpost-update.sample[39m
+-rwx------ 1 hlao002 csmajs   398 Nov 04 20:48 [32mpre-applypatch.sample[39m
+-rwx------ 1 hlao002 csmajs  1635 Nov 04 20:48 [32mpre-commit.sample[39m
+-rwx------ 1 hlao002 csmajs  1239 Nov 04 20:48 [32mprepare-commit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs  1348 Nov 04 20:48 [32mpre-push.sample[39m
+-rwx------ 1 hlao002 csmajs  4951 Nov 04 20:48 [32mpre-rebase.sample[39m
+-rwx------ 1 hlao002 csmajs  3611 Nov 04 20:48 [32mupdate.sample[39m
+
+./.git/info:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   240 Nov 04 20:48 exclude
+
+./.git/logs:
+total 16
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/logs/refs:
+total 16
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+
+./.git/logs/refs/heads:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 master
+
+./.git/logs/refs/remotes:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/logs/refs/remotes/origin:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+
+./.git/objects:
+total 260
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m00[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m02[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m03[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m0e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m11[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m16[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m1c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m26[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m27[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m28[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m29[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m2e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m4a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m54[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m62[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m63[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m69[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m85[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m89[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m93[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m94[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m97[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m9b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb4[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mba[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcb[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcf[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md9[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mda[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mdd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34me6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mea[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf1[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mfe[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mpack[39m
+
+./.git/objects/00:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   182 Nov 04 20:48 c8dfe5f67a09206bbbeb8467061329bc9165d6
+
+./.git/objects/02:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   172 Nov 04 20:48 1abadb813badfb3154ce43576d6ef825840986
+
+./.git/objects/03:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1688 Nov 04 20:48 10997a0d1d0ffc5c390aa2531f16f64a140f76
+
+./.git/objects/0e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   142 Nov 04 20:48 442cc988d51fb24ad62041692002e0e61bde4a
+
+./.git/objects/11:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   158 Nov 04 20:48 6d57b0716cdaae27f825d70556fe37477d6fce
+
+./.git/objects/16:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   160 Nov 04 20:48 18a804c2ec64da1d75c7663cfaeb49f2d95895
+
+./.git/objects/1c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  2604 Nov 04 20:48 298e0db68f1355ae7bbbfeb395fb1c274a5a4f
+
+./.git/objects/26:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 7c3e3042e45b2be0a58e2b84262e830ed6053e
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 d376d5c794d04b40cd24ed2cb1f4019f8a67f3
+
+./.git/objects/27:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   217 Nov 04 20:48 ce8b1500ef140d3e681f6c54b4c58efc4e2f5a
+
+./.git/objects/28:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   137 Nov 04 20:48 1bab1cd079ae9443de233f1ea697fcd19fbe44
+
+./.git/objects/29:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   769 Nov 04 20:48 57ecf3a932f126f14df4c3fa1a1a59cb528162
+
+./.git/objects/2e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 33aba01f7461ac8fdd8d2937ebfdc3c667f7a0
+
+./.git/objects/3a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 02b497a521c2d420d3c0c596e05963b1d7766f
+
+./.git/objects/3b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   189 Nov 04 20:48 1c652bec3765a883e0295240006f5723065781
+
+./.git/objects/3e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 f2bfd7bfad71be5c34c29df06846d98c0a7ed9
+
+./.git/objects/4a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1125 Nov 04 20:48 af1ae35698410d8b7fba8488f86f2e1f169922
+
+./.git/objects/54:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 4739d9455b86194541bdc37ab5f6bd6f01d8e7
+
+./.git/objects/5c:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 be1a4cf7ee8c84a06f4b6edf36601b8cac9f72
+
+./.git/objects/5f:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1204 Nov 04 20:48 bf054c7bf8036d7d4be8fe6601c3adcf4a89e2
+
+./.git/objects/62:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 fefb8bf3b850da1dcfa3a491bad9fbf3bf5627
+
+./.git/objects/63:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   150 Nov 04 20:48 a878138882c212605f2813757dd1d6e59be650
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 cb0aa21aeaf2488726b5c490db13adcab8a3bf
+
+./.git/objects/69:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 1b815d95cef8706e7d55feb0a4cd4a1248954b
+
+./.git/objects/6a:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   110 Nov 04 20:48 13ff4c2c5a8ebc13182b38bf2a53fbf7e62349
+
+./.git/objects/6b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 f1aac3b0feff9c364846e744c7dd3ed7b6787c
+
+./.git/objects/7c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   744 Nov 04 20:48 cccac3eb3dda470b2818062f159322982431d3
+
+./.git/objects/7e:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   758 Nov 04 20:48 f29c65af12f3224cdbcd382feb66b7a4e31d48
+
+./.git/objects/85:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 9e9d687e78ebaa98de127f58faf6fe94c4b369
+
+./.git/objects/89:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1923 Nov 04 20:48 5eb99d3174cbfa0dec73801af48afb99314425
+
+./.git/objects/8c:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 f192bcc9b910307a254edfa1c1b36eebc15893
+
+./.git/objects/8f:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 3f5a26f68b1929d658740ac6be6f32c3da87b1
+
+./.git/objects/93:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 650800f69c78b101525256951707ac3b1341aa
+-r-------- 1 hlao002 csmajs  1208 Nov 04 20:48 b093f4635577276af3509e420a39a83a25bec0
+
+./.git/objects/94:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 a04400f7cfd1617f25c137060344f7d65659b0
+
+./.git/objects/97:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 d602bc6c03121f9e9bbdfd9e59be320dc53b43
+
+./.git/objects/9b:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 c48feb2552f1d055acd8b0f72e3e761dbdb28e
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 d3826727e22d874583c37063e60df731df68e4
+
+./.git/objects/a5:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 bb4934d9aea5f8cb3ee7e24ea61d7c2c89ad68
+
+./.git/objects/a7:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 59111e2fbc50d3760e6193d2c9e4f512a197de
+
+./.git/objects/a8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 f7ba19d9fc5b3b2661c18fa9a467dceccb838f
+
+./.git/objects/b0:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 35b69dfc0206b429c434b2e20f948efe4bcb73
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 7bf828595fd2f71148334a5c705f6679e947df
+
+./.git/objects/b4:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1831 Nov 04 20:48 e7713f7a8652a4d6253834da634accbb04f489
+
+./.git/objects/b5:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1123 Nov 04 20:48 8bcd913f3123e2b5f9fa69293dd6dc9affd786
+
+./.git/objects/b8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 751e0c2b1493efc5d3c9d7883af7e313fca477
+
+./.git/objects/ba:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8f1654fdb49f7ad05a2d7bbbebc41da862c9f4
+
+./.git/objects/c3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3754 Nov 04 20:48 7b4302001491afb37fba635cfdef38bdd3fe8e
+
+./.git/objects/c6:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8159ffc935629be4dc863bd60807042d474de8
+
+./.git/objects/c7:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    51 Nov 04 20:48 0705dbeb206c8c923c187746c1e72ab85777b4
+
+./.git/objects/c8:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1895 Nov 04 20:48 06c5757192c86126e1973d9257bee88e711bca
+
+./.git/objects/cb:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 73211d17f55ea62cd07b2ed93d8273b00d8630
+
+./.git/objects/cc:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 81a72b07bad90a115db6ee58adf5790bd42169
+
+./.git/objects/cd:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 fff38f8eb33ade4c0a2eb5e738a4b16b9cda0f
+
+./.git/objects/cf:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   208 Nov 04 20:48 1dc72af7913734933ce863322688d66ef6668f
+
+./.git/objects/d0:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 cd4d449fbaabba53161a5c4e5b68dd3cdaf6de
+
+./.git/objects/d3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 fa57be0cdb799754ac13b0b483ad34dff347d3
+
+./.git/objects/d5:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    79 Nov 04 20:48 6c97c32df425d9f63eb56b71abb1f65f3fbaa1
+-r-------- 1 hlao002 csmajs   151 Nov 04 20:48 ae156dde2dafc296b679f8eb73c20f9d602b70
+
+./.git/objects/d9:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 1b755d065551b07508d3297d03d5fc3df6ad45
+
+./.git/objects/da:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   166 Nov 04 20:48 c1679581f21fe019f4ce5835d6c83f1788d7cc
+-r-------- 1 hlao002 csmajs    88 Nov 04 20:48 fb13af5fe55d5dcb029f845eea38f47bf5cdf6
+
+./.git/objects/dd:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   149 Nov 04 20:48 c8031a548852b0794fcd59122c6733efb07ca3
+
+./.git/objects/e6:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1523 Nov 04 20:48 304a3021baa9ba5013154053d4e7f2d50cc1ae
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 976b31f1101e3938ab5fe44f2e5a951da9b972
+-r-------- 1 hlao002 csmajs    15 Nov 04 20:48 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+./.git/objects/ea:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3176 Nov 04 20:48 f27923f03cfa81ec3345a946b34945c2ec471b
+
+./.git/objects/f1:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 409764ea2ff8b6ed70f45b6b93dc21060ac7cd
+
+./.git/objects/f3:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   157 Nov 04 20:48 ae52065d984b1e2721a44c809a233d3c9ad5b7
+
+./.git/objects/fe:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   174 Nov 04 20:48 8ff24318cc4dab1a55324e9797eb1e8b71f6de
+
+./.git/objects/info:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./.git/objects/pack:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./.git/refs:
+total 20
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mtags[39m
+
+./.git/refs/heads:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    41 Nov 04 20:48 master
+
+./.git/refs/remotes:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/refs/remotes/origin:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    32 Nov 04 20:48 HEAD
+
+./.git/refs/tags:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+./src:
+total 92
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 51812 Nov 09 14:11 [32ma.out[39m
+-rw------- 1 hlao002 csmajs  2085 Nov 04 20:48 cp.cpp
+-rw------- 1 hlao002 csmajs  6266 Nov 09 02:07 hw0.cpp
+-rw------- 1 hlao002 csmajs  5338 Nov 09 19:07 ls2.cpp
+-rw------- 1 hlao002 csmajs  7440 Nov 11 19:45 ls.cpp
+-rw------- 1 hlao002 csmajs  2701 Nov 04 20:48 Timer.h
+
+./test:
+total 128
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs 17743 Nov 04 20:48 exec.script
+-rw------- 1 hlao002 csmajs 98304 Nov 11 19:48 ls.script
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m #testing regular files
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls Makefile
+Makefile
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls Makefile -a
+Makefile
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls Makefile -al
+Makefile
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls Makefile -alR
+Makefile
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls Makefile -alR src/a./[K[K[K./a.out
+Makefile
+
+[32msrc/./a.out[39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls bin
+[32mcp      [39m[32mls      [39m[32mrshell  [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m -R bin
+bash: -R: command not found
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -R bin
+.:
+[32mcp      [39m[32mls      [39m[32mrshell  [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -R bin -a src
+bin:
+.:
+[47m[34m.       [39m[49m[47m[34m..      [39m[49m[32mcp      [39m[32mls      [39m[32mrshell  [39m
+
+src:
+.:
+[47m[34m.        [39m[49m[47m[34m..       [39m[49m[32ma.out    [39mcp.cpp   hw0.cpp  ls2.cpp  ls.cpp   Timer.h  
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m #testing paths
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls .
+[34mbin        [39mLICENSE    Makefile   README.md  [34msrc        [39m[34mtest       [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ..
+[34mrshell  [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ../..
+[34mCS100      [39m[34mCS61       [39m[34mDesktop    [39m[34mDocuments  [39m[34mDownloads  [39m[34mMusic      [39m[34mPictures   [39m
+[34mPublic     [39m[34mTemplates  [39m[34mVideos     [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ../..[K[Krhsell
+stat : No such file or directory
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ../rhsell[K[K[K[K[Kshell
+[34mbin        [39mLICENSE    Makefile   README.md  [34msrc        [39m[34mtest       [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ../rshell/src bin
+../rshell/src:
+[32ma.out    [39mcp.cpp   hw0.cpp  ls2.cpp  ls.cpp   Timer.h  
+
+bin:
+[32mcp      [39m[32mls      [39m[32mrshell  [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ../rshell/src bin -al
+../rshell/src:
+total 92
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 51812 Nov 09 14:11 [32ma.out[39m
+-rw------- 1 hlao002 csmajs  2085 Nov 04 20:48 cp.cpp
+-rw------- 1 hlao002 csmajs  6266 Nov 09 02:07 hw0.cpp
+-rw------- 1 hlao002 csmajs  5338 Nov 09 19:07 ls2.cpp
+-rw------- 1 hlao002 csmajs  7440 Nov 11 19:45 ls.cpp
+-rw------- 1 hlao002 csmajs  2701 Nov 04 20:48 Timer.h
+
+bin:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ../rshell/src bin -al -R -R
+../rshell/src:
+.:
+total 92
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 51812 Nov 09 14:11 [32ma.out[39m
+-rw------- 1 hlao002 csmajs  2085 Nov 04 20:48 cp.cpp
+-rw------- 1 hlao002 csmajs  6266 Nov 09 02:07 hw0.cpp
+-rw------- 1 hlao002 csmajs  5338 Nov 09 19:07 ls2.cpp
+-rw------- 1 hlao002 csmajs  7440 Nov 11 19:45 ls.cpp
+-rw------- 1 hlao002 csmajs  2701 Nov 04 20:48 Timer.h
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls ../rshell/src bin -al -R -R[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K bin -aLR[K[KlR
+../rshell/:
+.:
+total 40
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [34mbin[39m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.git[39m[49m
+-rw------- 1 hlao002 csmajs   101 Nov 04 20:48 LICENSE
+-rw------- 1 hlao002 csmajs   630 Nov 09 14:20 Makefile
+-rw------- 1 hlao002 csmajs  5682 Nov 11 18:45 README.md
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [34msrc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [34mtest[39m
+
+./bin:
+../rshell/:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git:
+../rshell/:
+total 48
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mbranches[39m
+-rw------- 1 hlao002 csmajs   258 Nov 04 20:48 config
+-rw------- 1 hlao002 csmajs    73 Nov 04 20:48 description
+-rw------- 1 hlao002 csmajs    23 Nov 04 20:48 HEAD
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mhooks[39m
+-rw------- 1 hlao002 csmajs   568 Nov 09 05:50 index
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mlogs[39m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [34mobjects[39m
+-rw------- 1 hlao002 csmajs   204 Nov 04 20:48 packed-refs
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/branches:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/hooks:
+../rshell/:
+total 48
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs   452 Nov 04 20:48 [32mapplypatch-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   896 Nov 04 20:48 [32mcommit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs   189 Nov 04 20:48 [32mpost-update.sample[39m
+-rwx------ 1 hlao002 csmajs   398 Nov 04 20:48 [32mpre-applypatch.sample[39m
+-rwx------ 1 hlao002 csmajs  1635 Nov 04 20:48 [32mpre-commit.sample[39m
+-rwx------ 1 hlao002 csmajs  1239 Nov 04 20:48 [32mprepare-commit-msg.sample[39m
+-rwx------ 1 hlao002 csmajs  1348 Nov 04 20:48 [32mpre-push.sample[39m
+-rwx------ 1 hlao002 csmajs  4951 Nov 04 20:48 [32mpre-rebase.sample[39m
+-rwx------ 1 hlao002 csmajs  3611 Nov 04 20:48 [32mupdate.sample[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/info:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   240 Nov 04 20:48 exclude
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/logs:
+../rshell/:
+total 16
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [34mrefs[39m
+
+./.git/logs/refs:
+../rshell/:
+total 16
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+
+./.git/logs/refs/heads:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 master
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/logs/refs/remotes:
+../rshell/:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 4 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/logs/refs/remotes/origin:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs   171 Nov 04 20:48 HEAD
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects:
+../rshell/:
+total 260
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m00[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m02[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m03[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m0e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m11[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m16[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m1c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m26[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m27[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m28[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m29[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m2e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m3e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m4a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m54[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m5f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m62[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m63[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m69[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6a[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m6b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m7e[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m85[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m89[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8c[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m8f[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m93[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m94[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m97[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34m9b[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34ma8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb4[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mb8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mba[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc7[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mc8[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcb[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcc[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mcf[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md0[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md5[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34md9[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mda[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mdd[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34me6[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mea[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf1[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mf3[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mfe[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34minfo[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mpack[39m
+
+./.git/objects/00:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   182 Nov 04 20:48 c8dfe5f67a09206bbbeb8467061329bc9165d6
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/02:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   172 Nov 04 20:48 1abadb813badfb3154ce43576d6ef825840986
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/03:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1688 Nov 04 20:48 10997a0d1d0ffc5c390aa2531f16f64a140f76
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/0e:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   142 Nov 04 20:48 442cc988d51fb24ad62041692002e0e61bde4a
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/11:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   158 Nov 04 20:48 6d57b0716cdaae27f825d70556fe37477d6fce
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/16:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   160 Nov 04 20:48 18a804c2ec64da1d75c7663cfaeb49f2d95895
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/1c:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  2604 Nov 04 20:48 298e0db68f1355ae7bbbfeb395fb1c274a5a4f
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/26:
+../rshell/:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 7c3e3042e45b2be0a58e2b84262e830ed6053e
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 d376d5c794d04b40cd24ed2cb1f4019f8a67f3
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/27:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   217 Nov 04 20:48 ce8b1500ef140d3e681f6c54b4c58efc4e2f5a
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/28:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   137 Nov 04 20:48 1bab1cd079ae9443de233f1ea697fcd19fbe44
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/29:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   769 Nov 04 20:48 57ecf3a932f126f14df4c3fa1a1a59cb528162
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/2e:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 33aba01f7461ac8fdd8d2937ebfdc3c667f7a0
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/3a:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   155 Nov 04 20:48 02b497a521c2d420d3c0c596e05963b1d7766f
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/3b:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   189 Nov 04 20:48 1c652bec3765a883e0295240006f5723065781
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/3e:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   153 Nov 04 20:48 f2bfd7bfad71be5c34c29df06846d98c0a7ed9
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/4a:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1125 Nov 04 20:48 af1ae35698410d8b7fba8488f86f2e1f169922
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/54:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 4739d9455b86194541bdc37ab5f6bd6f01d8e7
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/5c:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 be1a4cf7ee8c84a06f4b6edf36601b8cac9f72
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/5f:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1204 Nov 04 20:48 bf054c7bf8036d7d4be8fe6601c3adcf4a89e2
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/62:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 fefb8bf3b850da1dcfa3a491bad9fbf3bf5627
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/63:
+../rshell/:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   150 Nov 04 20:48 a878138882c212605f2813757dd1d6e59be650
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 cb0aa21aeaf2488726b5c490db13adcab8a3bf
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/69:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 1b815d95cef8706e7d55feb0a4cd4a1248954b
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/6a:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   110 Nov 04 20:48 13ff4c2c5a8ebc13182b38bf2a53fbf7e62349
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/6b:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 f1aac3b0feff9c364846e744c7dd3ed7b6787c
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/7c:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   744 Nov 04 20:48 cccac3eb3dda470b2818062f159322982431d3
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/7e:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   758 Nov 04 20:48 f29c65af12f3224cdbcd382feb66b7a4e31d48
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/85:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 9e9d687e78ebaa98de127f58faf6fe94c4b369
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/89:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1923 Nov 04 20:48 5eb99d3174cbfa0dec73801af48afb99314425
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/8c:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 f192bcc9b910307a254edfa1c1b36eebc15893
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/8f:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 3f5a26f68b1929d658740ac6be6f32c3da87b1
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/93:
+../rshell/:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   111 Nov 04 20:48 650800f69c78b101525256951707ac3b1341aa
+-r-------- 1 hlao002 csmajs  1208 Nov 04 20:48 b093f4635577276af3509e420a39a83a25bec0
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/94:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 a04400f7cfd1617f25c137060344f7d65659b0
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/97:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 d602bc6c03121f9e9bbdfd9e59be320dc53b43
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/9b:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 c48feb2552f1d055acd8b0f72e3e761dbdb28e
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 d3826727e22d874583c37063e60df731df68e4
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/a5:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 bb4934d9aea5f8cb3ee7e24ea61d7c2c89ad68
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/a7:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 59111e2fbc50d3760e6193d2c9e4f512a197de
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/a8:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 f7ba19d9fc5b3b2661c18fa9a467dceccb838f
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/b0:
+../rshell/:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   128 Nov 04 20:48 35b69dfc0206b429c434b2e20f948efe4bcb73
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 7bf828595fd2f71148334a5c705f6679e947df
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/b4:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1831 Nov 04 20:48 e7713f7a8652a4d6253834da634accbb04f489
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/b5:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1123 Nov 04 20:48 8bcd913f3123e2b5f9fa69293dd6dc9affd786
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/b8:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   148 Nov 04 20:48 751e0c2b1493efc5d3c9d7883af7e313fca477
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/ba:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8f1654fdb49f7ad05a2d7bbbebc41da862c9f4
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/c3:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3754 Nov 04 20:48 7b4302001491afb37fba635cfdef38bdd3fe8e
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/c6:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 8159ffc935629be4dc863bd60807042d474de8
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/c7:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    51 Nov 04 20:48 0705dbeb206c8c923c187746c1e72ab85777b4
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/c8:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1895 Nov 04 20:48 06c5757192c86126e1973d9257bee88e711bca
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/cb:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   147 Nov 04 20:48 73211d17f55ea62cd07b2ed93d8273b00d8630
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/cc:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   127 Nov 04 20:48 81a72b07bad90a115db6ee58adf5790bd42169
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/cd:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 fff38f8eb33ade4c0a2eb5e738a4b16b9cda0f
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/cf:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   208 Nov 04 20:48 1dc72af7913734933ce863322688d66ef6668f
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/d0:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   176 Nov 04 20:48 cd4d449fbaabba53161a5c4e5b68dd3cdaf6de
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/d3:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   159 Nov 04 20:48 fa57be0cdb799754ac13b0b483ad34dff347d3
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/d5:
+../rshell/:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    79 Nov 04 20:48 6c97c32df425d9f63eb56b71abb1f65f3fbaa1
+-r-------- 1 hlao002 csmajs   151 Nov 04 20:48 ae156dde2dafc296b679f8eb73c20f9d602b70
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/d9:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    52 Nov 04 20:48 1b755d065551b07508d3297d03d5fc3df6ad45
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/da:
+../rshell/:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   166 Nov 04 20:48 c1679581f21fe019f4ce5835d6c83f1788d7cc
+-r-------- 1 hlao002 csmajs    88 Nov 04 20:48 fb13af5fe55d5dcb029f845eea38f47bf5cdf6
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/dd:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   149 Nov 04 20:48 c8031a548852b0794fcd59122c6733efb07ca3
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/e6:
+../rshell/:
+total 16
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  1523 Nov 04 20:48 304a3021baa9ba5013154053d4e7f2d50cc1ae
+-r-------- 1 hlao002 csmajs   175 Nov 04 20:48 976b31f1101e3938ab5fe44f2e5a951da9b972
+-r-------- 1 hlao002 csmajs    15 Nov 04 20:48 9de29bb2d1d6434b8b29ae775ad8c2e48c5391
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/ea:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs  3176 Nov 04 20:48 f27923f03cfa81ec3345a946b34945c2ec471b
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/f1:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs    56 Nov 04 20:48 409764ea2ff8b6ed70f45b6b93dc21060ac7cd
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/f3:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   157 Nov 04 20:48 ae52065d984b1e2721a44c809a233d3c9ad5b7
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/fe:
+../rshell/:
+total 12
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-r-------- 1 hlao002 csmajs   174 Nov 04 20:48 8ff24318cc4dab1a55324e9797eb1e8b71f6de
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/info:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/objects/pack:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 65 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/refs:
+../rshell/:
+total 20
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 8 hlao002 csmajs  4096 Nov 09 05:50 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mheads[39m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [34mremotes[39m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34mtags[39m
+
+./.git/refs/heads:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    41 Nov 04 20:48 master
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/refs/remotes:
+../rshell/:
+total 12
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [34morigin[39m
+
+./.git/refs/remotes/origin:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 3 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs    32 Nov 04 20:48 HEAD
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./.git/refs/tags:
+../rshell/:
+total 8
+drwx------ 2 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m.[39m[49m
+drwx------ 5 hlao002 csmajs  4096 Nov 04 20:48 [47m[34m..[39m[49m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./src:
+../rshell/:
+total 92
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:45 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 51812 Nov 09 14:11 [32ma.out[39m
+-rw------- 1 hlao002 csmajs  2085 Nov 04 20:48 cp.cpp
+-rw------- 1 hlao002 csmajs  6266 Nov 09 02:07 hw0.cpp
+-rw------- 1 hlao002 csmajs  5338 Nov 09 19:07 ls2.cpp
+-rw------- 1 hlao002 csmajs  7440 Nov 11 19:45 ls.cpp
+-rw------- 1 hlao002 csmajs  2701 Nov 04 20:48 Timer.h
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+./test:
+../rshell/:
+total 192
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:46 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rw------- 1 hlao002 csmajs 17743 Nov 04 20:48 exec.script
+-rw------- 1 hlao002 csmajs 163840 Nov 11 19:53 ls.script
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+
+bin:
+.:
+total 124
+drwx------ 2 hlao002 csmajs  4096 Nov 11 19:44 [47m[34m.[39m[49m
+drwx------ 6 hlao002 csmajs  4096 Nov 11 19:00 [47m[34m..[39m[49m
+-rwx------ 1 hlao002 csmajs 15579 Nov 11 19:44 [32mcp[39m
+-rwx------ 1 hlao002 csmajs 54355 Nov 11 19:44 [32mls[39m
+-rwx------ 1 hlao002 csmajs 42361 Nov 11 19:44 [32mrshell[39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -A
+ls: invalid option -- 'A'
+the arguments supported by this program are ('a','l','R').
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -A[KL
+ls: invalid option -- 'L'
+the arguments supported by this program are ('a','l','R').
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -L[Kr
+ls: invalid option -- 'r'
+the arguments supported by this program are ('a','l','R').
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m #testing wrong path
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls jhadjk
+stat : No such file or directory
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls jhadjk -a
+stat : No such file or directory
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls jhadjk -a[K[K[K[K[K[K[K[K[Ksrc -a kjlds
+src:
+[47m[34m.        [39m[49m[47m[34m..       [39m[49m[32ma.out    [39mcp.cpp   hw0.cpp  ls2.cpp  ls.cpp   Timer.h  
+
+stat : No such file or directory
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m ]bin/ls src -a kjlds[K[K[K[K[K[K[K[K[K[K[K[K[K jsadjkhw -a src
+stat : No such file or directory
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m -
+bash: -: command not found
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls -
+[34mbin        [39mLICENSE    Makefile   README.md  [34msrc        [39m[34mtest       [39m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/ls src -a test Makefile README.md
+src:
+[47m[34m.        [39m[49m[47m[34m..       [39m[49m[32ma.out    [39mcp.cpp   hw0.cpp  ls2.cpp  ls.cpp   Timer.h  
+
+test:
+[47m[34m.            [39m[49m[47m[34m..           [39m[49mexec.script  ls.script    
+
+Makefile
+
+README.md
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m exot[K[Kit
+exit
+~
+hlao002@hammer $ exit
+exit
+
+Script done on Tue 11 Nov 2014 07:55:34 PM PST
