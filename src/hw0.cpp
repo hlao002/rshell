@@ -6,6 +6,8 @@
 #include <sys/types.h>
 #include <stdio.h>
 #include <sys/wait.h>
+#include <cstdlib>
+#include <fcntl.h>
 using namespace std;
 using namespace boost;
 
@@ -18,15 +20,263 @@ void replaceCntr (string &cmd,string sym,int dNum)
                 cmd.replace(found, dNum, " , ");
         }
 }
+void replaceRedir (string &cmd)
+{
+	bool multIn = false;
+	bool multOut = false;
+	int in=0;
+	int out=0;
+	int pipe=0;
+	for(int i=0;i < cmd.size();i++)
+	{
+		string msg;
+		if(cmd.compare(i,1,"<")==0)
+		{
+			in++;
+			if(in > 1)
+			{
+				multIn = true;
+				msg = "input";
+			}
+			cmd.replace(i,1," < ");
+			i = i+3;
+		}
+		else if((cmd.compare(i,1,">")==0)&& (cmd.compare(i+1,1,">")!=0) && (cmd.compare(i-1,1,">")!=0)) 
+		{
+			out++;
+			if(out > 1)
+			{
+				multOut = true;
+				msg = "output";
+			}
+			cmd.replace (i, 1, " > ");
+			i = i+3;
+		}
+		else if(cmd.compare(i,2,">>")==0)
+		{
+			out++;
+			if(out > 1)
+			{
+				multOut = true;
+				msg = "output";
+			}
+			cmd.replace(i, 2, " >> ");
+			i = i+4;
+		}
+		else if(cmd.compare(i,1,"|") ==0)
+		{
+			cmd.replace(i,1," | ");
+			i = i+3;
+		}
+		if(multIn || multOut)
+		{
+			cout << "Error: This program only supports one instance of " << msg << " redirection." << endl;
+			exit(1);
+		}
+	}
+}
+int returnIndex(char* Argv[],int size,string sym)
+{
+	int cnt = -1;
+	for (int i =0; i < size; i++)
+	{
+		cnt = i;
+		if(strcmp(Argv[i],sym.c_str())==0)
+			return cnt;
+		else
+			cnt = -1;
+	}
+	return cnt;
+}
+void inputRedir(char* Argv[],int index)
+{
+	int fd = open(Argv[index+1], O_RDONLY);
+	if(fd == -1)
+	{
+		perror("open ");
+		exit(1);
+	}
+	if(close(0) == -1)
+	{
+		perror("close");
+		exit(1);
+	}
+	if(dup2(fd,0) == -1)
+	{
+		perror("dup2");
+		exit(1);
+	}
+	char*temp[256];
+	for(int i=0;i < index;i++)
+	{
+		temp[i] = Argv[i];
+	}
+	temp[index] = NULL;
+	if(execvp(Argv[0],temp) == -1)
+	{
+		perror("execvp ");
+		exit(1);
+	}
+}
+void outputRedir(char* Argv[],int index, bool output2)
+{
+	int fd;
+	if(output2)
+	{
+		fd=open(Argv[index+1],O_WRONLY|O_CREAT|O_APPEND,0777);
+		if (fd == -1)
+		{
+			perror("open ");
+			exit(1);
+		}
+	}
+	else
+	{
+		fd=open(Argv[index+1],O_WRONLY|O_CREAT,0777);
+		if (fd == -1)
+		{
+			perror("open ");
+			exit(1);
+		}
+	}
+	if(close(1) == -1)
+	{
+		perror("close");
+		exit(1);
+	}	
+	if(dup2(fd,1) == -1)
+	{
+		perror("dup2");
+		exit(1);
+	}
+	char*temp[256];
+	for(int i=0;i < index; i++)
+		temp[i] = Argv[i];
+	temp[index] = NULL;
+	if(execvp(Argv[0],temp) == -1)
+	{
+		perror("execvp ");
+		exit(1);
+	}
+}
+void piping(char* Argv[],int index, int size)
+{
+	char** first;
+	first = new char*[256];
+	char** second;
+	second = new char*[256];
+	int end2Index = 0;
+	for(int i=0; i < index; i++)
+	{
+		first[i] = Argv[i];
+//		cout << first[i]<< endl;
+	}
+	first[index] = NULL;
+	for(int i= index +1; Argv[i] != '\0'; i++)
+	{
+		second[end2Index] = Argv[i];
+		end2Index++;
+//		cout << second[end2Index] << endl;
+	}
+	second[end2Index] = NULL;
+	int fd[2];
+	if (pipe(fd) == -1)
+	{
+		perror ("pipe");
+		exit(1);
+	}
+	int pid = fork();
+	
+	if (pid == -1)
+	{
+		perror("fork");
+		exit(1);
+	}
+	else if (pid == 0)
+	{
+		if(dup2(fd[1],1) == -1)
+		{
+			perror("dup2");
+			exit(1);
+		}
+		if(close(fd[0]) == -1)
+		{
+			perror("close");
+			exit(1);
+		}
+		if(execvp(first[0],first)== -1)
+		{
+			perror("execvp");
+		}
+		exit(1);
+	}
+	else
+	{
+		if(close(fd[1]) == -1)
+		{
+			perror("close");
+			exit(1);
+		}
 
+		int stdIn = dup(0);
+		if (stdIn == -1)
+		{
+			perror("dup");
+			exit(1);
+		}
+		if(dup2(fd[0],0)== -1)
+		{
+			perror("dup2");
+			exit(1);
+		}
+		if(wait(0) == -1)
+		{
+			perror("wait");
+			exit(1);
+		}
+		int pipe2Index = returnIndex(second,end2Index,"|");
+		if(pipe2Index == -1)
+		{
+			int pid = fork();
+			if(pid == -1)
+			{
+				perror("fork");
+			}
+			else if (pid == 0)
+			{
+				if(execvp(second[0],second) == -1)
+					perror("execvp");
+				exit(1);	
+			}
+			else
+			{
+				if(wait(0) == -1)
+				{
+					perror("wait");
+					exit(1);
+				}
+			}
+		}
+		else
+		{
+			piping(second,pipe2Index,end2Index);
+		}
+		if(dup2(stdIn,0) == -1)
+		{
+			perror("dup2-1");
+			exit(1);
+		}
+		delete[] first;
+		delete[] second;
+	}
+	
+}
 void bash()
 {
 // Getting the hostname
 char hostname[128];
 gethostname(hostname,sizeof hostname);
-while(1)
-{
-        cout << getlogin() << "@" << hostname << "$ ";
+	cout << getlogin() << "@" << hostname << "$ ";
         string cmd;
         string connector;
         int status = 0;
@@ -62,6 +312,7 @@ while(1)
                 ors = true;
                 connector = "||";
         }
+	replaceRedir(cmd);
         //Replace connectors with placeholders.
         if(colon || ands || ors)
 	{
@@ -128,6 +379,7 @@ while(1)
                         exit(0);
                 }
                 Argv[j]= NULL;
+		int size = j;
                 //fork the function.
                 int pid = fork();
                 //CHILD!!
@@ -140,13 +392,41 @@ while(1)
                 }
                 else if(pid == 0)
                 {
+			bool regExec = true;
+			int inputRe = returnIndex(Argv,size,"<");
+			int outputRe = returnIndex(Argv,size,">");
+			int outputRe2 = returnIndex(Argv,size,">>");
+			int pipeIndex = returnIndex(Argv,size,"|");
+			if(inputRe != -1) 
+			{
+				regExec = false;
+				inputRedir(Argv,inputRe);
+			}
+			if(outputRe != -1) 
+			{
+				regExec = false;
+				outputRedir(Argv,outputRe,false);\
+			}
+			else if(outputRe2 != -1) 
+			{
+				regExec = false;	
+				outputRedir(Argv,outputRe2,true);
+			}
+			if(pipeIndex != -1)
+			{
+				regExec = false;
+				piping(Argv,pipeIndex,size);
+			}
                         //Test for fail execvp.
-                        if(execvp(Argv[0], Argv) == -1)
-                        {
-                                perror("execvp");
-                                delete[] Argv;
-                                exit(1);
-                        }
+                        if(regExec)
+			{
+                  	  	if(execvp(Argv[0], Argv) == -1)
+	                        {
+        	                        perror("execvp");
+                	                delete[] Argv;
+                        	        exit(1);
+      	                	 }
+		      	}
                 }
                 //PARENTS!!!
                 else
@@ -184,7 +464,6 @@ while(1)
                         }
                 }
         }
-}
 }
 int main(int argc, char** argv)
 {
