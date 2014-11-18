@@ -1,47 +1,66 @@
-RSHELL v1.0
+# RSHELL v1.1
 ---------------------------------------------------------------------------------------------------
 by Hon Lao (Henry Lao)
 
 
-Table of Contents
+###Table of Contents
 ---------------------------------------------------------------------------------------------------
 RSHELL
+
 	-Introduction
+
 	-Installation
+
 	-Program Functions
+
 	-Limitations and Bugs
-LS
+
+
+RSHELL v1.1
+
+(Redirection & Piping)
+
 	-Introduction
+
+	-Program Function
+
+	-Limitations and Bugs
+
+LS
+
+	-Introduction
+
 	-Installation
+
 	-Program Functions
+
 	-Limitation and Bugs
 
--RSHELL
+
+#RSHELL
 ---------------------------------------------------------------------------------------------------
 
-Introduction
+###Introduction
 ---------------------------------------------------------------------------------------------------
 This program (rshell) is a basic bash command module that is capable of running bash commands founded in /bin(eg. "mkdir", "pwd" , "ls" etc)
 
 All bash commands can be found at (http://ss64.com/bash/)
 
-Installation
+###Installation
 --------------------------------------------------------------------------------------------------
 To install and execute run rshell in Linux, enter the following commands into the terminal:
 
-        1) git clone http://github.com/hlao002/rshell.git
-
+```
+	1) git clone http://github.com/hlao002/rshell.git
         2) cd rshell
-
         3) git checkout hw0
-
         4) make
-
         5) bin/rshell
+```
 
 *Note: In order to correctly execute rshell, C++ boost library and g++ compiler must be installed in the OS.
 
-Program Functions
+### Program Functions
 ---------------------------------------------------------------------------------------------------
 -Rshell supports all bash commands and its respective arguments found in /bin.
 
@@ -77,7 +96,7 @@ Program Functions
 
         Example: "; echo cat" will cause rshell to print out an error.
 
-Limitations and Bugs
+###Limitations and Bugs
 ----------------------------------------------------------------------------------------------------
 -The bash command "echo" will only print out 1 space between arguments even if more spaces are used.
 
@@ -88,14 +107,50 @@ Limitations and Bugs
 
 -Rshell cannot use the bash command "cd"
 
-LS
+#RSHELL v1.1 (Redirection and Piping)
+---------------------------------------------------------------------------------------------------
+
+###Introduction
+---------------------------------------------------------------------------------------------------
+Update v1.1 of Rshell will now include the feature of I/O redirection as well as piping. For additional information on the functionality of I/O redirection: [click here](http://www.gnu.org/software/bash/manual/bashref.html#Redirections). For additional information on the functionality of pipes: [click here](http://unixhelp.ed.ac.uk/CGI/man-cgi?pipe+2).
+
+###Program Functions
+-------------------------------------------------------------------------------------------------------
+-Rshell v1.1 will support input redirection '<', output redirection '>' '>>', and piping '|'.
+
+-The program can only support one instance of each method of redirection, but can support multiple pipes.
+
+-The program **CANNOT** support the connectors of the original Rshell and Rshell v1.1 together.
+
+-The '<' symbol will execute input redirection given the syntax (command '<' file).
+
+-The '>' symbol will execute output redirection (destructive) given the syntax (command '>' file).
+
+-The '>>' symbol will execute output redirection (appending) given the syntax (command '>' file).
+
+-The '|' symbol will execute piping and can be chained multiple times ( file '|' command '|' command '|' command)
+
+-The functions can be use together in a single command. Example: (wc -l < file|command|command >> output.txt)
+
+-If no new features are invoked, rshell v1.1 will execute the same as rshell v1.0.
+
+-Rshell v1.1 will terminate if more than one instance of each method of redirection is passed in.
+
+###Limitations and Bugs
+-------------------------------------------------------------------------------------------------------
+-Rshell v1.1 cannot support multple instances of each method of redirection.
+
+-Rshell v1.1 cannot support file to file redirection. (Permission Denied Error)
+
+
+#LS
 -------------------------------------------------------------------------------------------------------
 
-Introduction
+###Introduction
 -------------------------------------------------------------------------------------------------------
 ls is a basic bash command program that replicates the ls bash command, ls is capable of running the flags (-a,-l,-R)
 
-Installation
+###Installation
 ------------------------------------------------------------------------------------------------------
 To install and execute run ls in Linux, enter the following commands into the terminal:
 
@@ -111,7 +166,7 @@ To install and execute run ls in Linux, enter the following commands into the te
 
 *Note: In order to correctly execute ls, g++ compiler must be installed in the OS.
 
-Program Functions
+###Program Functions
 ---------------------------------------------------------------------------------------------------
 -ls supports the flags -l,-a,-R as well as multiple optional parameters
 
@@ -135,7 +190,7 @@ Program Functions
 
 
 
-Limitations and Bugs
+###Limitations and Bugs
 -------------------------------------------------------------------------------------------------------
 -The gray background outputted along with any hidden files will cover the entirety of the file name and proceeding empty space.
 
