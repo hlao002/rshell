@@ -26,8 +26,7 @@ void replaceRedir (string &cmd)
 	bool multOut = false;
 	int in=0;
 	int out=0;
-	int pipe=0;
-	for(int i=0;i < cmd.size();i++)
+	for(int i=0;(size_t)i < cmd.size();i++)
 	{
 		string msg;
 		if(cmd.compare(i,1,"<")==0)
@@ -90,15 +89,12 @@ int returnIndex(char* Argv[],int size,string sym)
 }
 void inputRedir(char* Argv[],int index)
 {
+	Argv[index] = 0;
+	cout << Argv[index+1] << endl;
 	int fd = open(Argv[index+1], O_RDONLY);
 	if(fd == -1)
 	{
-		perror("open ");
-		exit(1);
-	}
-	if(close(0) == -1)
-	{
-		perror("close");
+		perror("open c");
 		exit(1);
 	}
 	if(dup2(fd,0) == -1)
@@ -106,20 +102,10 @@ void inputRedir(char* Argv[],int index)
 		perror("dup2");
 		exit(1);
 	}
-	char*temp[256];
-	for(int i=0;i < index;i++)
-	{
-		temp[i] = Argv[i];
-	}
-	temp[index] = NULL;
-	if(execvp(Argv[0],temp) == -1)
-	{
-		perror("execvp ");
-		exit(1);
-	}
 }
 void outputRedir(char* Argv[],int index, bool output2)
 {
+	Argv[index] = 0;
 	int fd;
 	if(output2)
 	{
@@ -139,137 +125,122 @@ void outputRedir(char* Argv[],int index, bool output2)
 			exit(1);
 		}
 	}
-	if(close(1) == -1)
-	{
-		perror("close");
-		exit(1);
-	}	
 	if(dup2(fd,1) == -1)
 	{
 		perror("dup2");
 		exit(1);
 	}
-	char*temp[256];
-	for(int i=0;i < index; i++)
-		temp[i] = Argv[i];
-	temp[index] = NULL;
-	if(execvp(Argv[0],temp) == -1)
+}
+void runExecvp(char* Argv[], int size)
+{
+	int inIndex = returnIndex(Argv,size,"<");
+	int outIndex = returnIndex(Argv,size,">");
+	int out2Index = returnIndex(Argv,size,">>");
+	if(inIndex != -1)
 	{
-		perror("execvp ");
+		inputRedir(Argv,inIndex);
+//		Argv[inIndex] =0;
+	}
+	if(outIndex != -1)
+	{
+		outputRedir(Argv,outIndex,false);
+//		Argv[outIndex]=0;
+	}
+	else if(out2Index != -1)
+	{
+		outputRedir(Argv,out2Index,true);
+//		Argv[out2Index] =0;
+	}
+	if(execvp(Argv[0],Argv) == -1)
+	{
+		perror("execvp");
 		exit(1);
 	}
 }
-void piping(char* Argv[],int index, int size)
+void piping(char* Argv[], int size)
 {
-	char** first;
-	first = new char*[256];
-	char** second;
-	second = new char*[256];
+	char* first[256];
+	char* second[256];
 	int end2Index = 0;
-	for(int i=0; i < index; i++)
+	int index = returnIndex(Argv,size,"|");
+	if(index == -1)
 	{
-		first[i] = Argv[i];
-//		cout << first[i]<< endl;
-	}
-	first[index] = NULL;
-	for(int i= index +1; Argv[i] != '\0'; i++)
-	{
-		second[end2Index] = Argv[i];
-		end2Index++;
-//		cout << second[end2Index] << endl;
-	}
-	second[end2Index] = NULL;
-	int fd[2];
-	if (pipe(fd) == -1)
-	{
-		perror ("pipe");
-		exit(1);
-	}
-	int pid = fork();
-	
-	if (pid == -1)
-	{
-		perror("fork");
-		exit(1);
-	}
-	else if (pid == 0)
-	{
-		if(dup2(fd[1],1) == -1)
-		{
-			perror("dup2");
-			exit(1);
-		}
-		if(close(fd[0]) == -1)
-		{
-			perror("close");
-			exit(1);
-		}
-		if(execvp(first[0],first)== -1)
-		{
-			perror("execvp");
-		}
-		exit(1);
+		runExecvp(Argv,size);
 	}
 	else
 	{
-		if(close(fd[1]) == -1)
+		for(int i=0; i < index; i++)
 		{
-			perror("close");
+			first[i] = Argv[i];
+//		cout << first[i]<< endl;
+		}
+		first[index] = NULL;
+		for(int i= index +1; Argv[i] != '\0'; i++)
+		{
+			second[end2Index] = Argv[i];
+			end2Index++;
+//			cout << second[end2Index] << endl;
+		}
+		second[end2Index] = NULL;
+		int fd[2];
+		if (pipe(fd) == -1)
+		{
+			perror ("pipe");
 			exit(1);
 		}
-
-		int stdIn = dup(0);
-		if (stdIn == -1)
+		int pid = fork();
+		
+		if (pid == -1)
 		{
-			perror("dup");
+			perror("fork");
 			exit(1);
 		}
-		if(dup2(fd[0],0)== -1)
+		else if (pid == 0)
 		{
-			perror("dup2");
-			exit(1);
-		}
-		if(wait(0) == -1)
-		{
-			perror("wait");
-			exit(1);
-		}
-		int pipe2Index = returnIndex(second,end2Index,"|");
-		if(pipe2Index == -1)
-		{
-			int pid = fork();
-			if(pid == -1)
+			if(dup2(fd[1],1) == -1)
 			{
-				perror("fork");
+				perror("dup2");
+				exit(1);
 			}
-			else if (pid == 0)
+			if(close(fd[0]) == -1)
 			{
-				if(execvp(second[0],second) == -1)
-					perror("execvp");
-				exit(1);	
+				perror("close");
+				exit(1);
 			}
-			else
-			{
-				if(wait(0) == -1)
-				{
-					perror("wait");
-					exit(1);
-				}
-			}
+			runExecvp(first,index);
 		}
 		else
 		{
-			piping(second,pipe2Index,end2Index);
-		}
-		if(dup2(stdIn,0) == -1)
-		{
-			perror("dup2-1");
-			exit(1);
-		}
-		delete[] first;
-		delete[] second;
-	}
+			if(close(fd[1]) == -1)
+			{
+				perror("close");
+				exit(1);
+			}
 	
+			int stdIn = dup(0);
+			if (stdIn == -1)
+			{
+				perror("dup");
+				exit(1);
+			}
+			if(dup2(fd[0],0)== -1)
+			{
+				perror("dup2");
+				exit(1);
+			}
+			if(wait(0) == -1)
+			{
+				perror("wait");
+				exit(1);
+			}
+			piping(second,end2Index);
+			if(dup2(stdIn,0) == -1)
+			{
+				perror("dup2-1");
+				exit(1);
+			}
+		}
+	}
 }
 void bash()
 {
@@ -379,7 +350,6 @@ gethostname(hostname,sizeof hostname);
                         exit(0);
                 }
                 Argv[j]= NULL;
-		int size = j;
                 //fork the function.
                 int pid = fork();
                 //CHILD!!
@@ -392,41 +362,7 @@ gethostname(hostname,sizeof hostname);
                 }
                 else if(pid == 0)
                 {
-			bool regExec = true;
-			int inputRe = returnIndex(Argv,size,"<");
-			int outputRe = returnIndex(Argv,size,">");
-			int outputRe2 = returnIndex(Argv,size,">>");
-			int pipeIndex = returnIndex(Argv,size,"|");
-			if(inputRe != -1) 
-			{
-				regExec = false;
-				inputRedir(Argv,inputRe);
-			}
-			if(outputRe != -1) 
-			{
-				regExec = false;
-				outputRedir(Argv,outputRe,false);\
-			}
-			else if(outputRe2 != -1) 
-			{
-				regExec = false;	
-				outputRedir(Argv,outputRe2,true);
-			}
-			if(pipeIndex != -1)
-			{
-				regExec = false;
-				piping(Argv,pipeIndex,size);
-			}
-                        //Test for fail execvp.
-                        if(regExec)
-			{
-                  	  	if(execvp(Argv[0], Argv) == -1)
-	                        {
-        	                        perror("execvp");
-                	                delete[] Argv;
-                        	        exit(1);
-      	                	 }
-		      	}
+			piping(Argv,j);
                 }
                 //PARENTS!!!
                 else
@@ -459,6 +395,7 @@ gethostname(hostname,sizeof hostname);
                         //If not return to beginning of terminal.
                         else
                         {
+				delete Argv;
                                 bash();
                                 exit(0);
                         }
