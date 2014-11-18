@@ -20,7 +20,7 @@ void replaceCntr (string &cmd,string sym,int dNum)
                 cmd.replace(found, dNum, " , ");
         }
 }
-void replaceRedir (string &cmd)
+void replaceRedir (string &cmd,int& num,char& numChar)
 {
 	bool multIn = false;
 	bool multOut = false;
@@ -48,8 +48,23 @@ void replaceRedir (string &cmd)
 				multOut = true;
 				msg = "output";
 			}
-			cmd.replace (i, 1, " > ");
-			i = i+3;
+			if(isdigit(cmd[i-1]))
+			{
+				i--;
+				num = cmd.at(i) - '0';
+				numChar = cmd.at(i);
+				string temp="";
+				temp.append(" ");
+				temp.push_back(numChar);
+				temp.append("> ");
+				cmd.replace(i,2,temp);
+				i=i+4;
+			}
+			else
+			{
+				cmd.replace (i, 1, " > ");
+				i = i+3;
+			}
 		}
 		else if(cmd.compare(i,2,">>")==0)
 		{
@@ -59,8 +74,23 @@ void replaceRedir (string &cmd)
 				multOut = true;
 				msg = "output";
 			}
-			cmd.replace(i, 2, " >> ");
-			i = i+4;
+			if(isdigit(cmd[i-1]))
+			{
+				i--;
+				num = cmd.at(i) - '0';
+				numChar = cmd.at(i);
+				string temp="";
+				temp.append(" ");
+				temp.push_back(numChar);
+				temp.append(">> ");
+				cmd.replace(i,3,temp);
+				i=i+5;
+			}
+			else
+			{
+				cmd.replace (i, 1, " >> ");
+				i = i+4;
+			}
 		}
 		else if(cmd.compare(i,1,"|") ==0)
 		{
@@ -90,7 +120,6 @@ int returnIndex(char* Argv[],int size,string sym)
 void inputRedir(char* Argv[],int index)
 {
 	Argv[index] = 0;
-	cout << Argv[index+1] << endl;
 	int fd = open(Argv[index+1], O_RDONLY);
 	if(fd == -1)
 	{
@@ -103,7 +132,7 @@ void inputRedir(char* Argv[],int index)
 		exit(1);
 	}
 }
-void outputRedir(char* Argv[],int index, bool output2)
+void outputRedir(char* Argv[],int index, bool output2,int num)
 {
 	Argv[index] = 0;
 	int fd;
@@ -118,24 +147,45 @@ void outputRedir(char* Argv[],int index, bool output2)
 	}
 	else
 	{
-		fd=open(Argv[index+1],O_WRONLY|O_CREAT,0777);
+		fd=open(Argv[index+1],O_WRONLY|O_CREAT|O_TRUNC,0777);
 		if (fd == -1)
 		{
 			perror("open ");
 			exit(1);
 		}
 	}
-	if(dup2(fd,1) == -1)
+	if(num == -1)
 	{
-		perror("dup2");
-		exit(1);
+		if(dup2(fd,1) == -1)
+		{
+			perror("dup2");
+			exit(1);
+		}
+	}
+	else
+	{
+		if(dup2(fd,num) == -1)
+		{
+			perror("dup2");
+			exit(1);
+		}
 	}
 }
-void runExecvp(char* Argv[], int size)
+void runExecvp(char* Argv[], int size,int num,char numChar)
 {
+	string numOut = "";
+	numOut.push_back(numChar);
+	numOut.append(">");
+	string numOut2 = "";
+	numOut2.push_back(numChar);
+	numOut2.append(">>");
 	int inIndex = returnIndex(Argv,size,"<");
 	int outIndex = returnIndex(Argv,size,">");
 	int out2Index = returnIndex(Argv,size,">>");
+	int out3Index = returnIndex(Argv,size,numOut);
+	int out4Index = returnIndex(Argv,size,numOut2);
+//	cout << numOut << numOut2 << endl;
+//	cout << inIndex << outIndex << out2Index << out3Index << out4Index << endl;
 	if(inIndex != -1)
 	{
 		inputRedir(Argv,inIndex);
@@ -143,13 +193,21 @@ void runExecvp(char* Argv[], int size)
 	}
 	if(outIndex != -1)
 	{
-		outputRedir(Argv,outIndex,false);
+		outputRedir(Argv,outIndex,false,num);
 //		Argv[outIndex]=0;
 	}
 	else if(out2Index != -1)
 	{
-		outputRedir(Argv,out2Index,true);
+		outputRedir(Argv,out2Index,true,num);
 //		Argv[out2Index] =0;
+	}
+	else if(out3Index != -1)
+	{
+		outputRedir(Argv,out3Index,false,num);
+	}
+	else if(out4Index != -1)
+	{
+		outputRedir(Argv,out4Index,true,num);
 	}
 	if(execvp(Argv[0],Argv) == -1)
 	{
@@ -157,7 +215,7 @@ void runExecvp(char* Argv[], int size)
 		exit(1);
 	}
 }
-void piping(char* Argv[], int size)
+void piping(char* Argv[], int size, int num,char numChar)
 {
 	char* first[256];
 	char* second[256];
@@ -165,7 +223,7 @@ void piping(char* Argv[], int size)
 	int index = returnIndex(Argv,size,"|");
 	if(index == -1)
 	{
-		runExecvp(Argv,size);
+		runExecvp(Argv,size,num,numChar);
 	}
 	else
 	{
@@ -207,7 +265,7 @@ void piping(char* Argv[], int size)
 				perror("close");
 				exit(1);
 			}
-			runExecvp(first,index);
+			runExecvp(first,index,num,numChar);
 		}
 		else
 		{
@@ -233,7 +291,7 @@ void piping(char* Argv[], int size)
 				perror("wait");
 				exit(1);
 			}
-			piping(second,end2Index);
+			piping(second,end2Index,num,numChar);
 			if(dup2(stdIn,0) == -1)
 			{
 				perror("dup2-1");
@@ -252,6 +310,8 @@ gethostname(hostname,sizeof hostname);
         string connector;
         int status = 0;
         int dNum;
+	char numChar = '\0';
+	int num = -1;
         getline(cin, cmd);
         bool colon = false;
         bool ands = false;
@@ -283,8 +343,9 @@ gethostname(hostname,sizeof hostname);
                 ors = true;
                 connector = "||";
         }
-	replaceRedir(cmd);
+	replaceRedir(cmd,num,numChar);
         //Replace connectors with placeholders.
+        //cout << cmd << endl << numChar << endl;
         if(colon || ands || ors)
 	{
                 replaceCntr(cmd,connector,dNum);
@@ -362,7 +423,7 @@ gethostname(hostname,sizeof hostname);
                 }
                 else if(pid == 0)
                 {
-			piping(Argv,j);
+			piping(Argv,j,num,numChar);
                 }
                 //PARENTS!!!
                 else
