@@ -10,6 +10,7 @@
 #include <fcntl.h>
 using namespace std;
 using namespace boost;
+void bash();
 
 //Replace all connectors with placeholders " , ".
 void replaceCntr (string &cmd,string sym,int dNum)
@@ -88,7 +89,7 @@ void replaceRedir (string &cmd,int& num,char& numChar)
 			}
 			else
 			{
-				cmd.replace (i, 1, " >> ");
+				cmd.replace (i, 2, " >> ");
 				i = i+4;
 			}
 		}
@@ -100,7 +101,8 @@ void replaceRedir (string &cmd,int& num,char& numChar)
 		if(multIn || multOut)
 		{
 			cout << "Error: This program only supports one instance of " << msg << " redirection." << endl;
-			exit(1);
+			bash();
+			exit(0);
 		}
 	}
 }
@@ -123,13 +125,15 @@ void inputRedir(char* Argv[],int index)
 	int fd = open(Argv[index+1], O_RDONLY);
 	if(fd == -1)
 	{
-		perror("open c");
-		exit(1);
+		perror("open");
+		bash();
+		exit(0);
 	}
 	if(dup2(fd,0) == -1)
 	{
 		perror("dup2");
-		exit(1);
+		bash();
+		exit(0);
 	}
 }
 void outputRedir(char* Argv[],int index, bool output2,int num)
@@ -142,7 +146,8 @@ void outputRedir(char* Argv[],int index, bool output2,int num)
 		if (fd == -1)
 		{
 			perror("open ");
-			exit(1);
+			bash();
+			exit(0);
 		}
 	}
 	else
@@ -150,8 +155,9 @@ void outputRedir(char* Argv[],int index, bool output2,int num)
 		fd=open(Argv[index+1],O_WRONLY|O_CREAT|O_TRUNC,0777);
 		if (fd == -1)
 		{
-			perror("open ");
-			exit(1);
+			perror("open");
+			bash();
+			exit(0);
 		}
 	}
 	if(num == -1)
@@ -159,7 +165,8 @@ void outputRedir(char* Argv[],int index, bool output2,int num)
 		if(dup2(fd,1) == -1)
 		{
 			perror("dup2");
-			exit(1);
+			bash();
+			exit(0);
 		}
 	}
 	else
@@ -167,7 +174,8 @@ void outputRedir(char* Argv[],int index, bool output2,int num)
 		if(dup2(fd,num) == -1)
 		{
 			perror("dup2");
-			exit(1);
+			bash();
+			exit(0);
 		}
 	}
 }
@@ -212,7 +220,8 @@ void runExecvp(char* Argv[], int size,int num,char numChar)
 	if(execvp(Argv[0],Argv) == -1)
 	{
 		perror("execvp");
-		exit(1);
+		bash();
+		exit(0);
 	}
 }
 void piping(char* Argv[], int size, int num,char numChar)
@@ -294,7 +303,7 @@ void piping(char* Argv[], int size, int num,char numChar)
 			piping(second,end2Index,num,numChar);
 			if(dup2(stdIn,0) == -1)
 			{
-				perror("dup2-1");
+				perror("dup2");
 				exit(1);
 			}
 		}
@@ -322,6 +331,21 @@ gethostname(hostname,sizeof hostname);
                 int found = cmd.find("#");
                 cmd.erase(found,cmd.size()-found);
         }
+	for(unsigned i=0;i < cmd.size();i++)
+	{
+		if(cmd[i] == ' ')
+		{
+			cmd.erase(i,1);
+			i--;
+		}
+		else
+			break;
+	}
+	if (cmd.size()== 0)
+	{
+		bash();
+		exit(0);
+	}
         //Test for ";".
         if (cmd.find(";")!=string::npos)
         {
@@ -345,7 +369,6 @@ gethostname(hostname,sizeof hostname);
         }
 	replaceRedir(cmd,num,numChar);
         //Replace connectors with placeholders.
-        //cout << cmd << endl << numChar << endl;
         if(colon || ands || ors)
 	{
                 replaceCntr(cmd,connector,dNum);
@@ -399,6 +422,12 @@ gethostname(hostname,sizeof hostname);
                 {
                         //store a command and its arguments into Argv.
                         string placeHolder = *it2;
+			if(placeHolder.size() == 0)
+			{
+				bash();
+				exit(0);
+				
+			}
                         Argv[j] = new char[placeHolder.size()];
                         strcpy(Argv[j],placeHolder.c_str());
                 }
