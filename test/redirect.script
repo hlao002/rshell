@@ -1,0 +1,182 @@
+Script started on Thu 20 Nov 2014 07:40:29 PM PST
+~
+hlao002@hammer $ cs![K100
+[0;91m
+===============================================================================
+|                                                                             |
+| You have enabled settings specific for cs100.                               |
+|                                                                             |
+===============================================================================
+[0m
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~[0;95m [0;36m$[0m cd CS100/rshell
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/rshell
+hlao002@hammer.cs.ucr.edu$ #testing i/o redirection
+hlao002@hammer.cs.ucr.edu$ ls
+bin  LICENSE  Makefile	README.md  src	test
+hlao002@hammer.cs.ucr.edu$ echo test> ne  t.txt
+hlao002@hammer.cs.ucr.edu$ cat t.txt
+test
+hlao002@hammer.cs.ucr.edu$ echo tate > t.txt
+hlao002@hammer.cs.ucr.edu$ cat t.txt
+tate
+hlao002@hammer.cs.ucr.edu$ echo test2 >> t.txt
+hlao002@hammer.cs.ucr.edu$ cat tx .txt
+tate
+test2
+hlao002@hammer.cs.ucr.edu$ echo testtwo>> t.txt
+hlao002@hammer.cs.ucr.edu$ cat t.txt
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ # testing extra credit output c redir with num fd
+hlao002@hammer.cs.ucr.edu$ g++ deosntexist.cpp 2>> error.txt
+hlao002@hammer.cs.ucr.edu$ cat error.txt
+g++: error: deosntexist.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+hlao002@hammer.cs.ucr.edu$ g++ doesntexist2.cpp 2> error.txt
+hlao002@hammer.cs.ucr.edu$ cat error.txt
+g++: error: doesntexist2.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+hlao002@hammer.cs.ucr.edu$ g++ hello.cpp2 2  > error.txt
+hlao002@hammer.cs.ucr.edu$ cat error.txt
+g++: error: hello.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+hlao002@hammer.cs.ucr.edu$ g++ hello.cpp22>> error .  .txt
+hlao002@hammer.cs.ucr.edu$ cat error.txt
+g++: error: hello.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+g++: error: hello.cpp2: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+hlao002@hammer.cs.ucr.edu$ g++ dkasl.cpp2>error.txt
+hlao002@hammer.cs.ucr.edu$ cat error.txt
+g++: error: dkasl.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+hlao002@hammer.cs.ucr.edu$ #testing input d redirection
+hlao002@hammer.cs.ucr.edu$ cat < t.txt
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ cat t..t  txt
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ wc<t.txt
+ 3  3 19
+hlao002@hammer.cs.ucr.edu$ wc -l          <t.txt
+3
+hlao002@hammer.cs.ucr.edu$ #testing input and output redir together
+hlao002@hammer.cs.ucr.edu$ cat < t.txt > t2.txt
+hlao002@hammer.cs.ucr.edu$ cat t2.txt
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ cat <t2.txt > t3     >t3.txt
+hlao002@hammer.cs.ucr.edu$ cat t3..tx   txt
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ cat  < t.txt >> t2.txt
+hlao002@hammer.cs.ucr.edu$ cat t2.txt
+tate
+test2
+testtwo
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ cat< tx .txt 2>> t2.txt
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ cat t2.txt
+tate
+test2
+testtwo
+tate
+test2
+testtwo
+hlao002@hammer.cs.ucr.edu$ #testing pipping
+hlao002@hammer.cs.ucr.edu$ cat t.txt >     | cat | cat | grep test | grep 2
+test2
+hlao002@hammer.cs.ucr.edu$ cat < t.txt | grep test | cat | grep two
+testtwo
+hlao002@hammer.cs.ucr.edu$ cat t.txt | grep test | wc > t2.txt
+hlao002@hammer.cs.ucr.edu$ cat t2.txt
+      2       2      14
+hlao002@hammer.cs.ucr.edu$ cat t.txt | grep two | wc >>     >>t2.txt
+hlao002@hammer.cs.ucr.edu$ cat t2.txt
+      2       2      14
+      1       1       8
+hlao002@hammer.cs.ucr.edu$ testing       #Testing example command found in assignment r RED AD> ME.md
+hlao002@hammer.cs.ucr.edu$ cat < Makefile | tr A-Z a-z | tee lower.txt | tr a-z A-Z > upper.txt
+hlao002@hammer.cs.ucr.edu$ cat lower.txt
+all:
+	if [ ! -d "./bin" ];\
+	then mkdir bin;\
+	fi
+	g++ -wall -werror -ansi -pedantic src/hw0.cpp -o bin/rshell
+	g++ -wall -werror -ansi -pedantic src/cp.cpp -o bin/cp
+	g++ -wall -werror -ansi -pedantic src/ls.cpp -o bin/ls 
+rshell:
+	if [ ! -d "./bin" ];\
+	then mkdir bin;\
+	fi
+	g++ -wall -werror -ansi -pedantic src/hw0.cpp -o bin/rshell
+cp:
+	if [ ! -d "./bin" ];\
+	then mkdir bin;\
+	fi
+	g++ -wall -werror -ansi -pedantic src/cp.cpp -o bin/cp                                                                             
+ls:
+	if [ ! -d "./bin" ];\
+	then mkdir bin;\
+	fi
+	g++ -wall -werror -ansi -pedantic src/ls.cpp -o bin/ls     
+hlao002@hammer.cs.ucr.edu$ cat upper.txt
+ALL:
+	IF [ ! -D "./BIN" ];\
+	THEN MKDIR BIN;\
+	FI
+	G++ -WALL -WERROR -ANSI -PEDANTIC SRC/HW0.CPP -O BIN/RSHELL
+	G++ -WALL -WERROR -ANSI -PEDANTIC SRC/CP.CPP -O BIN/CP
+	G++ -WALL -WERROR -ANSI -PEDANTIC SRC/LS.CPP -O BIN/LS 
+RSHELL:
+	IF [ ! -D "./BIN" ];\
+	THEN MKDIR BIN;\
+	FI
+	G++ -WALL -WERROR -ANSI -PEDANTIC SRC/HW0.CPP -O BIN/RSHELL
+CP:
+	IF [ ! -D "./BIN" ];\
+	THEN MKDIR BIN;\
+	FI
+	G++ -WALL -WERROR -ANSI -PEDANTIC SRC/CP.CPP -O BIN/CP                                                                             
+LS:
+	IF [ ! -D "./BIN" ];\
+	THEN MKDIR BIN;\
+	FI
+	G++ -WALL -WERROR -ANSI -PEDANTIC SRC/LS.CPP -O BIN/LS     
+hlao002@hammer.cs.ucr.edu$ ls
+bin  error.txt	LICENSE  lower.txt  Makefile  README.md  src  t2.txt  t3.txt  test  t.txt  upper.txt
+hlao002@hammer.cs.ucr.edu$ #testing properties of improper use of program
+hlao002@hammer.cs.ucr.edu$ 
+hlao002@hammer.cs.ucr.edu$ # 1.. ) Multiple int stea  ance of input and output redirection
+hlao002@hammer.cs.ucr.edu$ echo cat > t1.txt >> t2.txt
+Error: This program only supports one instance of output redirection.
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m bin/rshell
+hlao002@hammer.cs.ucr.edu$ # 2.) testing pipping befor re input (unknown behavior) (improper use)
+hlao002@hammer.cs.ucr.edu$ cat t1.txt | grep two < t2.txt > t3..tx   txt
+cat: t1.txt: No such file or directory
+hlao002@hammer.cs.ucr.edu$ # com nclude testing
+hlao002@hammer.cs.ucr.edu$ exit
+[s%%%%%%%%%%[u[0;32mhlao002[0;36m@[0;32mcs100[0;36m:[0;32m~/CS100/rshell[0;95m (master) [0;36m$[0m exit
+exit
+~
+hlao002@hammer $ exit
+exit
+
+Script done on Thu 20 Nov 2014 07:57:43 PM PST
