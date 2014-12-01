@@ -8,10 +8,14 @@
 #include <sys/wait.h>
 #include <cstdlib>
 #include <fcntl.h>
+#include <stdlib.h>
 using namespace std;
 using namespace boost;
 void bash();
-
+void sigInteruptC(int i)
+{
+	signal(SIGINT,SIG_IGN);
+}
 //Replace all connectors with placeholders " , ".
 void replaceCntr (string &cmd,string sym,int dNum)
 {
@@ -217,11 +221,35 @@ void runExecvp(char* Argv[], int size,int num,char numChar)
 	{
 		outputRedir(Argv,out4Index,true,num);
 	}
-	if(execvp(Argv[0],Argv) == -1)
+	string path = getenv("PATH");
+	if(path.empty())
+		perror("getev");
+	vector<string>dirPaths;
+	while(!(path.find(":") == string::npos))
 	{
-		perror("execvp");
-		bash();
-		exit(0);
+		dirPaths.push_back(path.substr(0,path.find(":")));
+		path = path.substr(path.find(":")+1);
+	}
+	int isExec = 0;
+	for(unsigned i=0;i<dirPaths.size();i++)
+	{
+		string temp = Argv[0];
+		dirPaths[i].append("/");
+		dirPaths[i].append(temp);
+			if((isExec = (access(const_cast<char*> (dirPaths[i].c_str()),X_OK)))== 0)
+			{
+				if(execv(const_cast<char*>(dirPaths.at(i).c_str()),Argv) == -1)
+				{
+					perror("execv");
+					bash();
+					exit(0);
+				}
+			}
+	}
+	if(isExec == -1)
+	{
+		perror("access");
+		exit(1);
 	}
 }
 void piping(char* Argv[], int size, int num,char numChar)
@@ -311,6 +339,7 @@ void piping(char* Argv[], int size, int num,char numChar)
 }
 void bash()
 {
+signal(SIGINT,sigInteruptC);
 // Getting the hostname
 char hostname[128];
 gethostname(hostname,sizeof hostname);
