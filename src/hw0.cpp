@@ -473,19 +473,19 @@ gethostname(hostname,sizeof hostname);
 		{
 			if(j == 1)
 			{
-				cout << "running cd" << endl;
 				char *home = getenv("HOME");
 				if(chdir(home) == -1) 
 					perror("chdir");
 			}
+			else if(j > 2)
+			{
+				cerr << "Error: Incorrect syntax, cd only accepts a maximum of 1 parameter." << endl;
+			}
 			else
 			{
-				cout << "running cd ." << endl;
 				if(-1 == chdir(Argv[1]))
 					perror("chdir");
 			}
-			bash();
-			exit(0);
 		}  
               //fork the function.
                 int pid = fork();
@@ -515,8 +515,11 @@ gethostname(hostname,sizeof hostname);
 						perror("chdir");
 				}
 			}
+*/
+			if(strcmp(Argv[0],"cd") == 0)
+				exit(0);
 			else
-*/				piping(Argv,j,num,numChar);
+				piping(Argv,j,num,numChar);
                 }
                 //PARENTS!!!
                 else
@@ -538,7 +541,7 @@ gethostname(hostname,sizeof hostname);
                         if((colon) || (cs && ands) || (!cs && ors))
                         {
                                 cont = true;
-                                continue;
+				continue;
                         }
                         if (cont && (tok[tok.size()-1]== ","))
                         {
@@ -555,6 +558,8 @@ gethostname(hostname,sizeof hostname);
                         }
                 }
         }
+bash();
+exit(0);
 }
 int main(int argc, char** argv)
 {
