@@ -469,7 +469,25 @@ gethostname(hostname,sizeof hostname);
                         exit(0);
                 }
                 Argv[j]= NULL;
-                //fork the function.
+		if(strcmp(Argv[0],"cd")== 0)
+		{
+			if(j == 1)
+			{
+				cout << "running cd" << endl;
+				char *home = getenv("HOME");
+				if(chdir(home) == -1) 
+					perror("chdir");
+			}
+			else
+			{
+				cout << "running cd ." << endl;
+				if(-1 == chdir(Argv[1]))
+					perror("chdir");
+			}
+			bash();
+			exit(0);
+		}  
+              //fork the function.
                 int pid = fork();
                 //CHILD!!
                 if(pid == -1)
@@ -481,7 +499,24 @@ gethostname(hostname,sizeof hostname);
                 }
                 else if(pid == 0)
                 {
-			piping(Argv,j,num,numChar);
+/*			if(strcmp(Argv[0],"cd")== 0)
+			{
+				if(j == 1)
+				{
+					cout << "running cd" << endl;
+					char *home = getenv("HOME");
+					if(chdir(home) == -1) 
+						perror("chdir");
+				}
+				else
+				{
+					cout << "running cd ." << endl;
+					if(-1 == chdir(Argv[1]))
+						perror("chdir");
+				}
+			}
+			else
+*/				piping(Argv,j,num,numChar);
                 }
                 //PARENTS!!!
                 else
