@@ -21,6 +21,13 @@ RSHELL v1.1
 	-Program Function
 	-Limitations and Bugs
 ```
+RSHELL v1.2
+(PATH,Signal Interupt,cd)
+```
+	-Introduction
+	-Program Function
+	-Limitations and Bugs
+```
 
 LS
 ```
@@ -150,6 +157,35 @@ Update v1.1 of Rshell will now include the feature of I/O redirection as well as
 -Rshell v1.1 cannot support file to file redirection. (Permission Denied Error)
 
 -Rshell will terminate on instances of fail system calls (fork, open, read, dup2, dup, wait)
+
+#RSHELL v1.2 (Path,Signal Interupt, cd)
+------------------------------------------------------------------------------------------------------
+
+###Introduction
+
+Update verison 1.2 of rshell will include, the use of the "PATH" variable to perform execv, ^C interrupt of foreground job, and implimentation of cd command.
+
+###Program Functions
+
+- When executing a bash command, rshell will now search multiple directories with the PATH variable manually to execute "execv" system call. 
+*NOTE* - There should be no change to the input and output of rshell.
+
+- ^C will now no longer terminate rshell. Instead, it will interrupt the current foreground process.
+
+- cd is now implimented into rshell.
+
+- cd will change the current directory to "HOME" path if no parameters are passed in.
+
+- cd can be used alongside all features from Rshell v1.0.
+
+	Example: cd (directory) ; echo cat
+
+###Limitations and Bugs
+
+- ^C will be printed out when using the ^C feature.
+
+- More than one parameter being passed into cd will result in an error.
+
 
 #LS
 -------------------------------------------------------------------------------------------------------
