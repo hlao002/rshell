@@ -342,8 +342,15 @@ void bash()
 signal(SIGINT,sigInteruptC);
 // Getting the hostname
 char hostname[128];
-gethostname(hostname,sizeof hostname);
-	cout << getlogin() << "@" << hostname << "$ ";
+if(gethostname(hostname,sizeof hostname)== -1)
+	{
+		perror("gethostname");
+	}
+	char* login;
+	login = getlogin();
+	if(login == NULL)
+		perror("getlogin");
+	cout << login << "@" << hostname << "$ ";
         string cmd;
         string connector;
         int status = 0;
